@@ -1,18 +1,27 @@
 <template>
-    <div>
-        <div class="w-auto h-12 bg-gray-500"> <p
-        class="text-center  text-[22.000993728637695px] font-bold italic  text-black">
-        PUB</p></div>
+    <div class="max-w-5xl m-auto">
+        <div class="w-auto h-12 bg-gray-500">
+            <p class="text-center  text-[22.000993728637695px] font-bold italic  text-black">
+                PUB
+            </p>
+        </div>
 
-        <img class="mt-9 w-11/12 mr-auto ml-auto rounded-2xl" alt="banniere" src="../../public/images/banniere__profile.jpg">
-        <photo-vue class="relative -top-9 -right-80"/>
-        <img  class="w-24 relative -top-20 mr-auto ml-auto" src="../../public/images/homme.png" alt="avatar">
-        <photo-vue class="relative -top-28 -right-52"/>
+        <div class="relative mt-9 w-11/12 mx-auto ml-auto">
+            <img class="w-full aspect-video md:aspect-[9/3] rounded-2xl" alt="banniere" src="../../public/images/banniere__profile.jpg">
+            <photo-vue class="absolute -bottom-2 -right-1"/>
 
-        <h2 class="text-center -mt-28 text-3xl font-medium">Antoine Perez</h2>
+            <div class="w-max absolute left-0 right-0 mx-auto -bottom-10">
+                <div class="relative">
+                    <img class="w-24" src="../../public/images/homme.png" alt="avatar">
+                    <photo-vue class="absolute right-0 bottom-0"/>
+                </div>
+            </div>
+        </div>
 
-        <noteVue class="font-arial py-1 pl-6 ">
-        <p class="relative text-zinc-500 -top-5 left-1">4.5</p>
+        <h2 class="text-center mt-14 mb-5 text-3xl font-medium">Antoine Perez</h2>
+
+        <noteVue>
+            4.5
         </noteVue>
 
         <textarea name="regleMatch" 
@@ -29,10 +38,10 @@
             nbr="19"
             texte="Match organisés "/>
         <BoxVue
-        nbr="34"
+            nbr="34"
             texte="Match joué "/>
         <BoxVue
-        nbr="21"
+            nbr="21"
             texte="Médailles"/>
         </div>
 
@@ -40,21 +49,27 @@
         <h2 class=" mt-10 ml-3 text-3xl font-medium">Médailles ✏️</h2>
 
         <div class="grid grid-cols-3 ">
-        <medaillesVue  image="/public/images/medailles1.png" txt="Homme du match  "/>
-        <medaillesVue  image="public/images/blocnote.png" txt="Organisateur né "/>
-        <medaillesVue  image="/public/images/trophee1.png" txt="Précurseur   "/>
+            <medaillesVue  image="/public/images/medailles1.png" txt="Homme du match  "/>
+            <medaillesVue  image="public/images/blocnote.png" txt="Organisateur né "/>
+            <medaillesVue  image="/public/images/trophee1.png" txt="Précurseur   "/>
         </div>
 
 
 
         <h2 class=" mt-9 mb-6 ml-3 text-3xl font-medium">Amis ✏️</h2>
         <div class="grid gap-3 grid-cols-1">
-        <Friends image="/public/images/Paul2.png" txt="Paul Montavon"/>
-        <Friends image="/public/images/Judie.png" txt="Judie Winehouse "/>
-        <Friends image="/public/images/Nathanael.png" txt="Nathanaël Desmeules"/>
-        <Friends image="/public/images/Christopher.png" txt="Christopher Mccandless "/>
-        <Friends image="/public/images/Marion.png" txt="Marion Comeira"/>
+            <Friends image="/public/images/Paul2.png" txt="Paul Montavon"/>
+            <Friends image="/public/images/Judie.png" txt="Judie Winehouse "/>
+            <Friends image="/public/images/Nathanael.png" txt="Nathanaël Desmeules"/>
+            <Friends image="/public/images/Christopher.png" txt="Christopher Mccandless "/>
+            <Friends image="/public/images/Marion.png" txt="Marion Comeira"/>
         </div> 
+
+        <RouterLink to="/" class="block w-max mx-auto my-10">
+            <button class="flex-none mx-auto w-max p-4 bg-white border-2 border-red-550 rounded-xl shadow-md shadow-gray-300 font-arial font-bold text-xl text-center">
+                Se déconnecter
+            </button>
+        </RouterLink>
 
         <div class="h-24"></div>
 
