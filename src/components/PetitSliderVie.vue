@@ -18,7 +18,7 @@
         <div class="shrink-0 w-4 sm:w-48"></div>
       </div>
       <div class="snap-center shrink-0 first:pl-8 last:pr-8">
-        <carte-terrain
+        <petitcart-terrain
           nom="Terrain de Basket Châteaudun"
           note="3.8"
           distance="210 m"
@@ -26,7 +26,7 @@
         />
       </div>
       <div class="snap-center shrink-0 first:pl-8 last:pr-8">
-        <carte-terrain
+        <petitcart-terrain
           nom="Skatepark  Harley Davidson"
           note="4.7"
           distance="4.3km"
@@ -34,7 +34,7 @@
         />
       </div>
       <div class="snap-center shrink-0 first:pl-8 last:pr-8">
-        <carte-terrain
+        <petitcart-terrain
           nom="Skatepark  Harley Davidson"
           note="4.7"
           distance="4.3km"
@@ -54,10 +54,11 @@
 
 <script>
 export default {
-  name: "slider",
-  components: { carteTerrain },
+  name: "petitslider",
+  components: { carteTerrain, petitcartTerrain },
 };
 
 import carteTerrain from "../components/carteTerrain.vue";
+import petitcartTerrain from "../components/PetitcarteTerrainView.vue";
 </script>
 
