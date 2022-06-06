@@ -1,7 +1,7 @@
 <template>
   <div class="ml-5 mt-9">
     <div class="text-xl font-arial font-bold">Enregistrés récemment</div>
-
+    <slider />
     <div
       class="
         fixed
@@ -72,10 +72,12 @@ import BoussoleGrayIcon from "../components/icons/boussoleGray.vue";
 import EnregistreGreenIcon from "../components/icons/enregistrementGreen.vue";
 import FriendsGrayIcon from "../components/icons/friendsGray.vue";
 import AvatarGrayIcon from "../components/icons/avatarGray.vue";
+import slider from "../components/SliderView.vue";
 
 export default {
   name: "EnregistreView",
   components: {
+    slider,
     BoussoleGrayIcon,
     EnregistreGreenIcon,
     FriendsGrayIcon,
