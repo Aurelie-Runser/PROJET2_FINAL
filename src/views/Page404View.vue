@@ -12,19 +12,21 @@
     </div>
 
     <div class="flex justify-center">
-      <button
-        class="
-          bg-white
-          text-green-450 text-lg
-          font-bold
-          mt-10
-          py-2
-          px-20
-          rounded-xl
-        "
-      >
-        Accueil
-      </button>
+      <RouterLink to="/">
+        <button
+          class="
+            bg-white
+            text-green-450 text-lg
+            font-bold
+            mt-10
+            py-2
+            px-20
+            rounded-xl
+          "
+        >
+          Accueil
+        </button>
+      </RouterLink>
     </div>
     <img
       class="w-screen absolute bottom-0"
