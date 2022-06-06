@@ -72,10 +72,20 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center">
-                    <input type="image" src="Créer" alt="Créer"
-                            class="w-52 p-4 bg-green-450 rounded-xl font-arial font-bold text-white text-4xl text-center">
+                <div class="flex flex-row flex-wrap gap-x-20 gap-y-5 justify-center">
+
+                    <button type="submit" class="flex-none w-52 p-4 bg-green-450 rounded-xl font-arial font-bold text-white text-4xl text-center">
+                        Créer
+                    </button>
+                    
+                    <RouterLink to="/">
+                    <button class="flex-none w-max p-4 bg-white border-2 border-red-550 rounded-xl font-arial font-bold text-4xl text-center">
+                    Abandonner
+                    </button>
+                    </RouterLink>
                 </div>
+
+                
             </div>
         </div>
         <div class="h-24"></div>
