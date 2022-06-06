@@ -1,29 +1,29 @@
 <template>
-<div class="flex flex-row -mt-2 ml-6 mb-3 content-center items-center w-max">
-    <img :src=image class="w-14"
-    alt="image Profile d'amis ">
-    
-    <p class="text-black ml-2 font-normal text-xl text-center">
-     {{txt}}
-    </p>
-</div>
+<div class="relative">
+  <div class="flex flex-row mt-2 ml-6 mb-3 content-center items-center w-max">
+      <img :src=image class="w-14"
+      alt="image Profile d'amis ">
+      
+      <p class="text-black ml-2 font-normal text-xl text-center">
+      {{txt}}
+      </p>
+  </div>
 
-<div class="relative -top-7 left-16">
-<svg
-  width="13"
-  height="13"
-  viewBox="0 0 13 13"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  preserveAspectRatio="xMidYMid meet"
->
-  <path
-    d="M13 6.5C13 10.0899 10.0899 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5Z"
-    fill="#049A5B"
-  ></path>
-</svg>
+  <div class="absolute bottom-3 left-16">
+  <svg
+    width="13"
+    height="13"
+    viewBox="0 0 13 13"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid meet">
+    <path
+      d="M13 6.5C13 10.0899 10.0899 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5Z"
+      fill="#049A5B"
+    ></path>
+  </svg>
+  </div>
 </div>
-
 </template>
 
 
