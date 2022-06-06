@@ -24,7 +24,7 @@
       />
     </label>
 
-    <h2 class="mt-7 ml-7">Connecté test (3)</h2>
+    <h2 class="mt-7 ml-7">Connecté (3)</h2>
     <div class="grid mt-10 grid-cols-1">
       <Friends2 image="/public/images/Paul2.png" txt="Paul Montavon " />
       <Friends2
