@@ -16,16 +16,29 @@
     <div class="grid grid-cols-2">
       <div class="text-base font-arial font-bold">Vos listes</div>
       <div class="justify-center">
+        <plusgreen class="inline align-top pt-1" />
         <div class="text-base inline text-green-550 font-arial">
           Ajouter une liste
         </div>
-        <plusgreen class="inline" />
       </div>
 
-      <div>4</div>
-      <div>5</div>
+      <div>
+        <div class="font-arial mt-2">Terrain de Frambouhans</div>
+        <div class="text-xs font-bold text-gray-500 inline">
+          Trois enregistrement✏️
+        </div>
+      </div>
     </div>
-    <div class="h-24"></div>
+
+    <div class="grid grid-cols-2">
+      <div>
+        <div class="font-arial mt-2">Skatepark</div>
+        <div class="text-xs font-bold text-gray-500 inline">
+          Deux enregistrement✏️
+        </div>
+      </div>
+    </div>
+    <div class="h-32"></div>
 
     <div
       class="
