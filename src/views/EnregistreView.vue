@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <RouterLink to="/non"> Enregistre </RouterLink>
-
-    <!--MENU-->
+  <div class="ml-5 mt-9">
+    <div class="text-xl font-arial font-bold">Enregistrés récemment</div>
 
     <div
       class="
