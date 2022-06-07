@@ -2,7 +2,7 @@
   <div
     class="
       relative
-      w-[350px]
+      w-full
       h-max
       p-2
       grid
@@ -12,9 +12,10 @@
       overflow-hidden
       shadow-md shadow-gray-500
       font-arial
+      border
     "
   >
-    <buttonMoinsTerrain class="absolute top-3 right-3" />
+    <notif class="absolute -top-2 -right-1" />
 
     <img
       :src="image"
@@ -49,10 +50,11 @@
 import fleche from "./icons/flecheDistance.vue";
 import stars from "./icons/stars.vue";
 import buttonMoinsTerrain from "./icons/buttonMoinsTerrain.vue";
+import notif from "./icons/notif.vue";
 
 export default {
-  name: "petitcartTerrain",
-  components: { fleche, stars, buttonMoinsTerrain },
+  name: "GrandeCarteTerrainNotif",
+  components: { fleche, stars, buttonMoinsTerrain, notif },
 
   props: {
     nom: { type: String },

@@ -37,12 +37,18 @@
     </div>
   </div>
 
-  <RouterLink to="/MatchOrga"> page orga </RouterLink>
+  <!-- nom: { type: String },
+    adresse: { type: String },
+    image: { type: String },
+    distance: { type: String },
+    note: { type: String }, -->
 </template>
 
  
 <script>
+import GrandeCarteTerrainNotif from "../components/GrandeCarteTerrainNotif.vue";
 export default {
   name: "Page404View ",
+  components: { GrandeCarteTerrainNotif },
 };
 </script>

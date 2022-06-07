@@ -86,7 +86,7 @@
       </button>
     </div>
 
-    <carteTerrainPlus
+    <GrandeCarteTerrainNotif
       nom="Skatepark Harley Davidson"
       note="4.7"
       distance="4.3km"
@@ -183,8 +183,9 @@ import TennisPing from "../components/icons/iconsPing/TennisIcon.vue";
 import BasketPing from "../components/icons/iconsPing/BasketIcon.vue";
 import SkatePing from "../components/icons/iconsPing/SkateIcon.vue";
 import RunPing from "../components/icons/iconsPing/RunIcon.vue";
-
 import carteTerrainPlus from "../components/carteTerrainPlus.vue";
+
+import GrandeCarteTerrainNotif from "../components/GrandeCarteTerrainNotif.vue";
 
 import buttonPlusMap from "../components/icons/buttonPlusMap.vue";
 
@@ -192,10 +193,13 @@ import BoussoleGreenIcon from "../components/icons/boussoleGreen.vue";
 import EnregistreWhiteIcon from "../components/icons/enregistrementWhite.vue";
 import FriendsGrayIcon from "../components/icons/friendsGray.vue";
 import AvatarGrayIcon from "../components/icons/avatarGray.vue";
+import GrandeCarteTerrain from "../components/GrandeCarteTerrain.vue";
 
 export default {
   name: "HomeView",
   components: {
+    GrandeCarteTerrain,
+    GrandeCarteTerrainNotif,
     buttonPlusMap,
     Ping,
     FootPing,

@@ -20,6 +20,8 @@ import ProfilAmiView from '../views/ProfilAmiView.vue'
 
 //Composant 
 import MatchOrgaView from '../components/MatchOrgaView.vue'
+import NotifView from '../components/GrandeCarteTerrainNotif.vue'
+
 
 
 
@@ -39,8 +41,10 @@ const router = createRouter({
 
     { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
 
-    { path: '/MatchOrga', name: 'MatchOrgaView', component: MatchOrgaView },
 
+    //composant 
+    { path: '/MatchOrga', name: 'MatchOrgaView', component: MatchOrgaView },
+    { path: '/notif', name: 'NotifView', component: NotifView },
 
 
     //page 404 
