@@ -1,3 +1,4 @@
+<!--Petite carte terrain utiliser dans les enregistrement pour supprimer et ajouter un terrain dans les favories...-->
 <template>
   <div
     class="
@@ -5,6 +6,7 @@
       h-44
       mx-4
       p-2
+      flex flex-col justify-between
       rounded-2xl
       overflow-hidden
       shadow-md shadow-gray-500
@@ -17,10 +19,10 @@
         alt="Terrain de basket"
         class="w-96 h-20 object-cover rounded-2xl"
       />
-      <figcaption class="text-sm">{{ nom }}</figcaption>
+      <figcaption class="text-sm my-1">{{ nom }}</figcaption>
       <!-- Ajoutez ici la base donné-->
     </figure>
-    <div class="flex justify-between items-center text-lg">
+    <div class="flex justify-around items-center text-lg">
       <div class="flex items-center">
         <fleche class="w-5" />
         <p class="">{{ distance }}</p>
@@ -31,17 +33,15 @@
         <p>{{ note }}</p>
         <!--base de donnée-->
       </div>
-      <div>
-        <plus class="" />
-      </div>
+
     </div>
   </div>
 </template>
 
 <script>
-import fleche from "../components/icons/flecheDistance.vue";
-import plus from "../components/icons/buttonPlusTerrain.vue";
-import stars from "../components/icons/stars.vue";
+import fleche from "./icons/flecheDistance.vue";
+import plus from "./icons/buttonPlusTerrain.vue";
+import stars from "./icons/stars.vue";
 
 export default {
   name: "petitcartTerrain",

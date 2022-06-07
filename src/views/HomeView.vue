@@ -1,9 +1,79 @@
 <template>
-  <div>
+  <div class="overflow-x-scroll">
+
+    <div class="w-max h-screen relative">
+      <img class="w-auto h-full z-0" src="/map.webp" alt="carte de Montbéliard">
+      
+      <!--Stade Annequin-->
+      <button class="absolute top-3 left-72" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <FootPing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+      
+      <!--Terrain de Tennis Silhouette -->
+      <button class="absolute top-80 left-20" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <TennisPing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+            
+      <!--Stade de la Banane-->
+      <button class="absolute top-[350px] left-[275px]" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <FootPing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+            
+      <!--Terrain Chabaud -->
+      <button class="absolute top-60 left-[630px]" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <FootPing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+            
+      <!--Terrain de Basket Châteaudun -->
+      <button class="absolute top-32 left-96" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <BasketPing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+            
+      <!--Skatepark Pascal Pané -->
+      <button class="absolute top-56 left-96" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <SkatePing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+            
+      <!--Parcours sportif du bois de Courcelles -->
+      <button class="absolute top-[600px] left-80" @click="CarteVisible = !CarteVisible">
+        <div class="w-max h-max relative">
+          <Ping class="w-14 h-auto"/>
+          <RunPing class="absolute top-1 left-3"/>
+        </div>
+      </button>
+
+    </div>
+
+        <carteTerrainPlus nom="Skatepark Harley Davidson"
+                  note="4.7"
+                  distance="4.3km"
+                  image="public\basket1.jpg"
+                  class="bg-white fixed -bottom-60 left-0 right-0 duration-500 transition-transform"
+                  :class="{ '-translate-y-96': CarteVisible }"/>
+    
+
+
     <RouterLink to="/creerMatch">
       <buttonPlusMap class="fixed right-4 bottom-28"/>
     </RouterLink>
-
 
     <!--MENU-->
 
@@ -41,6 +111,15 @@
 
 <script>
 
+import Ping from "../components/icons/ping.vue";
+import FootPing from "../components/icons/iconsPing/FootIcon.vue";
+import TennisPing from "../components/icons/iconsPing/TennisIcon.vue";
+import BasketPing from "../components/icons/iconsPing/BasketIcon.vue";
+import SkatePing from "../components/icons/iconsPing/SkateIcon.vue";
+import RunPing from "../components/icons/iconsPing/RunIcon.vue";
+
+import carteTerrainPlus from "../components/carteTerrainPlus.vue";
+
 import buttonPlusMap from "../components/icons/buttonPlusMap.vue";
   
 import BoussoleGreenIcon from "../components/icons/boussoleGreen.vue";
@@ -50,14 +129,15 @@ import AvatarGrayIcon from "../components/icons/avatarGray.vue";
   
   export default {
     name: 'HomeView',
-    components: {buttonPlusMap,
+    components: {buttonPlusMap, Ping, FootPing, TennisPing, BasketPing, SkatePing, RunPing,
+                carteTerrainPlus,
                 BoussoleGreenIcon, EnregistreWhiteIcon,
                 FriendsGrayIcon, AvatarGrayIcon
     },
 
     data(){
       return{
-        
+        CarteVisible: false,
       }
     },
   }

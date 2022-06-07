@@ -4,10 +4,16 @@ import HomeView from '../views/HomeView.vue'
 import EnregistreView from '../views/EnregistreView.vue'
 import AmisView from '../views/AmisView.vue'
 import ProfilView from '../views/ProfilView.vue'
+
 import Page404View from '../views/Page404View.vue'
 
 //Pages depuis la map
 import CreerMatchView from '../views/CreerMatchView.vue'
+
+//Pages depuis Amis
+import ProfilAmiView from '../views/ProfilAmiView.vue'
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +24,9 @@ const router = createRouter({
     { path: '/profil', name: 'ProfilView', component: ProfilView },
 
     { path: '/creerMatch', name: 'CreerMatchView', component: CreerMatchView },
+
+    { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
+
 
 
     //page 404 

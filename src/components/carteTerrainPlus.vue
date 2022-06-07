@@ -1,3 +1,4 @@
+<!--Carte de terrain utiliser pour créer un terrain-->
 <template>
   <div
     class="
@@ -15,33 +16,38 @@
       <img
         :src="image"
         alt="Terrain de basket"
-        class="w-full h-28 object-cover rounded-2xl"
-      />
+        class="w-full h-28 object-cover rounded-2xl"/>
+
       <figcaption class="my-3 text-sm">{{ nom }}</figcaption>
       <!-- Ajoutez ici la base donné-->
     </figure>
+
     <div class="flex justify-between items-center text-lg">
+
       <div class="flex items-center">
         <fleche class="mx-1 w-5" />
         <p class="">{{ distance }}</p>
         <!--base de donnée-->
       </div>
+
       <div class="flex items-center">
         <stars class="mx-1 w-5" />
         <p>{{ note }}</p>
         <!--base de donnée-->
       </div>
+
       <div>
-        <plus />
+        <plus/>
       </div>
+
     </div>
   </div>
 </template>
 
 <script>
-import fleche from "../components/icons/flecheDistance.vue";
-import plus from "../components/icons/buttonPlusTerrain.vue";
-import stars from "../components/icons/stars.vue";
+import fleche from "./icons/flecheDistance.vue";
+import plus from "./icons/buttonPlusTerrain.vue";
+import stars from "./icons/stars.vue";
 
 export default {
   name: "cartTerrain",

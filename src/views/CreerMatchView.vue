@@ -41,9 +41,23 @@
                         </button>
                     </div>
                     <div class="flex overflow-x-scroll py-2">
-                        <carteTerrain class="flex-none basis-auto"/>
-                        <carteTerrain class="flex-none basis-auto"/>
-                        <carteTerrain class="flex-none basis-auto"/>
+                        <carteTerrainPlus nom="Skatepark  Harley Davidson"
+                                    note="4.7"
+                                    distance="4.3km"
+                                    image="public\basket1.jpg"
+                                    class="flex-none basis-auto"/>
+                                    
+                        <carteTerrainPlus nom="Skatepark  Harley Davidson"
+                                    note="4.7"
+                                    distance="4.3km"
+                                    image="public\basket1.jpg"
+                                    class="flex-none basis-auto"/>
+                        <carteTerrainPlus nom="Skatepark  Harley Davidson"
+                                    note="4.7"
+                                    distance="4.3km"
+                                    image="public\basket1.jpg"
+                                    class="flex-none basis-auto"/>
+
                     </div>
                 </div>
 
@@ -121,7 +135,7 @@
 </template>
 
 <script>
-import carteTerrain from "../components/carteTerrain.vue";
+import carteTerrainPlus from "../components/carteTerrainPlus.vue";
 
 import BoussoleGreenIcon from "../components/icons/boussoleGreen.vue";
 import EnregistreWhiteIcon from "../components/icons/enregistrementWhite.vue";
@@ -130,7 +144,7 @@ import AvatarGrayIcon from "../components/icons/avatarGray.vue";
 
 export default{
     name:"CreerMatch",
-    components:{carteTerrain,
+    components:{carteTerrainPlus,
                 BoussoleGreenIcon, EnregistreWhiteIcon,
                 FriendsGrayIcon, AvatarGrayIcon},
     data(){

@@ -1,0 +1,3 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path fill="#ffffff" d="M224 136h3.3a4 4 0 0 1 3.9 4.5a104.2 104.2 0 0 1-94.8 91.1A88 88 0 0 1 224 136Zm-73.5 14.5A102.9 102.9 0 0 1 224 120h3.1a4 4 0 0 0 4.1-4.4a104.1 104.1 0 0 0-90.9-90.9a4 4 0 0 0-4.4 4.1a103.7 103.7 0 0 1-30.4 76.7A102.9 102.9 0 0 1 32 136h-3.1a4 4 0 0 0-4.1 4.4a104.1 104.1 0 0 0 90.9 90.9a4 4 0 0 0 4.4-4.1a103.7 103.7 0 0 1 30.4-76.7ZM94.2 94.2a87.6 87.6 0 0 0 25.7-65.7a4 4 0 0 0-4.5-3.7a104 104 0 0 0-90.6 90.6a4 4 0 0 0 3.8 4.5a87.8 87.8 0 0 0 65.6-25.7Z"></path></svg>
+</template>

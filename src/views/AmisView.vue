@@ -26,11 +26,11 @@
 
     <h2 class="mt-7 ml-7">Connecté (3)</h2>
     <div class="grid mt-10 grid-cols-1">
-      <Friends2 image="/public/images/Paul2.png" txt="Paul Montavon " />
-      <Friends2
-        image="/public/images/Nathanael.png"
-        txt="Nathanaël Desmeules"
-      />
+      <RouterLink to="/profilAmi">
+        <Friends2 image="/public/images/Paul2.png" txt="Paul Montavon " />
+      </RouterLink>
+
+      <Friends2 image="/public/images/Nathanael.png" txt="Nathanaël Desmeules"/>
       <Friends2 image="/public/images/Marion.png" txt="Marion Comeira" />
     </div>
 
@@ -128,7 +128,7 @@ import Friends2 from "../components/icons/friends2.vue";
 import FriendsHLVue from "../components/icons/friendsHL.vue";
 import FriendsHL from "../components/icons/friendsHL.vue";
 import FriendsHL1 from "../components/icons/friendsHL.vue";
-import FriendsAttente from "../components/friendsAttente.vue";
+import FriendsAttente from "../components/icons/friendsAttente.vue";
 
 export default {
   name: "HomeView",
