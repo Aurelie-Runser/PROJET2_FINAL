@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //Page du menu
 import HomeView from '../views/HomeView.vue'
-import EnregistreView from '../views/EnregistreView.vue'
+import EnregistreView from '../views/Enregistrement/EnregistreView.vue'
 import AmisView from '../views/AmisView.vue'
 import ProfilView from '../views/ProfilView.vue'
 
@@ -10,6 +10,9 @@ import ConnexionView from '../views/ConnexionView.vue'
 
 //Pages depuis la map
 import CreerMatchView from '../views/CreerMatchView.vue'
+
+//Pages depuis les Enregistrements
+import UpdateEnregistre from '../views/Enregistrement/UpdateView.vue'
 
 //Pages depuis Amis
 import ProfilAmiView from '../views/ProfilAmiView.vue'
@@ -26,6 +29,8 @@ const router = createRouter({
     { path: '/connexion', name: 'connexionView', component: ConnexionView },
 
     { path: '/creerMatch', name: 'CreerMatchView', component: CreerMatchView },
+
+    { path: '/updateEnregistre', name: 'UpdateEnregistre', component: UpdateEnregistre },
 
     { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
 
