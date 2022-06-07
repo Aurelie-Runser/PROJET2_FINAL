@@ -18,9 +18,12 @@
       <p class="text-base font-arial font-bold">Vos listes</p>
       <div class="justify-center">
         <plusgreen class="inline align-top pt-1" />
-        <p class="text-base inline text-green-550 font-arial">
-          Ajouter une liste
-        </p>
+
+        <RouterLink to="/createEnregistre">
+          <button class="text-base inline text-green-550 font-arial">
+            Ajouter une liste
+          </button>
+        </RouterLink>
       </div>
 
       <RouterLink to="/updateEnregistre">

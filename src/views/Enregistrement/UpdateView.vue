@@ -1,5 +1,10 @@
 <template>
     <div class="max-w-6xl m-auto">
+
+        <RouterLink to="/enregistre">
+            <flecheRetour class="m-5"/>
+        </RouterLink>
+
         <h1 class="m-5 text-xl font-arial font-bold">Terrain de Frambouhans</h1>
 
         <div class="mx-auto w-max my-10 flex flex-col lg:flex-row lg:flex-wrap lg:w-full gap-10">
@@ -50,7 +55,6 @@
                             class="flex-none basis-auto"/>
             </div>
         </div>
-
 
     <!--MENU-->
     <div class="h-28"></div>
@@ -125,6 +129,7 @@ import EnregistreGreenIcon from "../../components/icons/enregistrementGreen.vue"
 import FriendsGrayIcon from "../../components/icons/friendsGray.vue";
 import AvatarGrayIcon from "../../components/icons/avatarGray.vue";
 
+import flecheRetour from "../../components/icons/flecheRetour.vue";
 import GrandeCarteTerrain from "../../components/GrandeCarteTerrain.vue";
 import carteTerrainPlus from "../../components/carteTerrainPlus.vue";
 
@@ -136,6 +141,7 @@ export default {
     FriendsGrayIcon,
     AvatarGrayIcon,
 
+    flecheRetour,
     GrandeCarteTerrain,
     carteTerrainPlus,
   },
