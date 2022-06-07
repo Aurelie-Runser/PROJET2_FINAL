@@ -9,6 +9,7 @@
 
       <!--Stade Annequin-->
       <button
+        ref="inner_rect"
         class="absolute top-3 left-72"
         @click="CarteVisible = !CarteVisible"
       >
@@ -208,6 +209,19 @@ export default {
     FriendsGrayIcon,
     AvatarGrayIcon,
   },
+
+  /*
+  setup(props, context) {
+    let d = useInputModel(props, context.emit, "modelValue");
+    const inner_rect = ref(null);
+    useClickOutside(inner_rect, () => {
+      d.value = false;
+    });
+    return {
+      inner_rect,
+      d,
+    };
+  }, */
 
   data() {
     return {

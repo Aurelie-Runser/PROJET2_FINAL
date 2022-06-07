@@ -9,7 +9,7 @@ import Page404View from '../views/Page404View.vue'
 import ConnexionView from '../views/ConnexionView.vue'
 
 //Pages depuis la map
-import CreerMatchView from '../views/CreerMatchView.vue'
+import CreerMatchView from '../views/Match/CreerMatchView.vue'
 
 //Pages depuis les Enregistrements
 import CreateEnregistre from '../views/Enregistrement/CreateView.vue'
@@ -17,6 +17,9 @@ import UpdateEnregistre from '../views/Enregistrement/UpdateView.vue'
 
 //Pages depuis Amis
 import ProfilAmiView from '../views/ProfilAmiView.vue'
+
+//Composant 
+import MatchOrgaView from '../components/MatchOrgaView.vue'
 
 
 
@@ -35,6 +38,8 @@ const router = createRouter({
     { path: '/updateEnregistre', name: 'UpdateEnregistre', component: UpdateEnregistre },
 
     { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
+
+    { path: '/MatchOrga', name: 'MatchOrgaView', component: MatchOrgaView },
 
 
 
