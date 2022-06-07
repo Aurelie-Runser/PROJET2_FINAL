@@ -6,6 +6,7 @@ import AmisView from '../views/AmisView.vue'
 import ProfilView from '../views/ProfilView.vue'
 
 import Page404View from '../views/Page404View.vue'
+import ConnexionView from '../views/ConnexionView.vue'
 
 //Pages depuis la map
 import CreerMatchView from '../views/CreerMatchView.vue'
@@ -22,6 +23,7 @@ const router = createRouter({
     { path: '/enregistre', name: 'EnregistreView', component: EnregistreView },
     { path: '/amis', name: 'AmisView', component: AmisView },
     { path: '/profil', name: 'ProfilView', component: ProfilView },
+    { path: '/connexion', name: 'connexionView', component: ConnexionView },
 
     { path: '/creerMatch', name: 'CreerMatchView', component: CreerMatchView },
 
