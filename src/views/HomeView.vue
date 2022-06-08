@@ -2,7 +2,7 @@
   <div class="overflow-x-scroll">
     <div class="w-max h-screen relative">
       <img
-        class="w-auto h-full z-0"
+        class="w-auto h-full overflow-hidden z-0"
         src="/map.webp"
         alt="carte de Montbéliard"
       />
@@ -11,11 +11,12 @@
       <button
         ref="inner_rect"
         class="absolute top-3 left-72"
-        @click="CarteVisible = !CarteVisible"
+        @click="CarteVisiblenotif = !CarteVisiblenotif"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
           <FootPing class="absolute top-1 left-3" />
+          <rednotif class="absolute top-1 left-9" />
         </div>
       </button>
 
@@ -66,11 +67,10 @@
       <!--Skatepark Pascal Pané -->
       <button
         class="absolute top-56 left-96"
-        @click="CarteVisible = !CarteVisible"
+        @click="CarteVisiblenotif = !CarteVisiblenotif"
       >
         <div class="w-max h-max relative">
-          <Ping class="w-14 h-auto" />
-          <SkatePing class="absolute top-1 left-3" />
+          <skatenotif class="absolute top-1 w-14 left-3" />
         </div>
       </button>
 
@@ -80,13 +80,13 @@
         @click="CarteVisible = !CarteVisible"
       >
         <div class="w-max h-max relative">
-          <Ping class="w-14 h-auto" />
-          <RunPing class="absolute top-1 left-3" />
+          <Ping class="w-12 h-auto" />
+          <RunPing class="w-7 absolute top-1 left-3" />
         </div>
       </button>
     </div>
 
-    <GrandeCarteTerrainNotif
+    <GrandeCarteTerrain
       nom="Skatepark Harley Davidson"
       note="4.7"
       distance="4.3km"
@@ -94,13 +94,22 @@
       class="
         bg-white
         fixed
-        -bottom-60
+        -bottom-40
         left-0
         right-0
         duration-500
         transition-transform
       "
       :class="{ '-translate-y-96': CarteVisible }"
+    />
+
+    <GrandeCarteTerrainNotif
+      nom="Skatepark Harley Davidson"
+      note="4.7"
+      distance="4.3km"
+      image="public\basket1.jpg"
+      class="bg-white fixed -bottom-10 duration-500 transition-transform"
+      :class="{ '-translate-y-96': CarteVisiblenotif }"
     />
 
     <RouterLink to="/creerMatch">
@@ -177,6 +186,8 @@
 </style>
 
 <script>
+import rednotif from "../components/icons/iconsPing/rednotif.vue";
+import skatenotif from "../components/icons/iconsPing/skatenotif.vue";
 import Ping from "../components/icons/ping.vue";
 import FootPing from "../components/icons/iconsPing/FootIcon.vue";
 import TennisPing from "../components/icons/iconsPing/TennisIcon.vue";
@@ -198,6 +209,8 @@ import GrandeCarteTerrain from "../components/GrandeCarteTerrain.vue";
 export default {
   name: "HomeView",
   components: {
+    rednotif,
+    skatenotif,
     GrandeCarteTerrain,
     GrandeCarteTerrainNotif,
     buttonPlusMap,
@@ -230,6 +243,7 @@ export default {
   data() {
     return {
       CarteVisible: false,
+      CarteVisiblenotif: false,
     };
   },
 };
