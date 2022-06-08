@@ -18,9 +18,12 @@ import UpdateEnregistre from '../views/Enregistrement/UpdateView.vue'
 //Pages depuis Amis
 import ProfilAmiView from '../views/ProfilAmiView.vue'
 
-//Composant 
-import MatchOrgaView from '../components/MatchOrgaView.vue'
-import NotifView from '../components/GrandeCarteTerrainNotif.vue'
+//mention legales 
+import mentionView from '../views/mentionView.vue'
+
+
+
+
 
 
 const router = createRouter({
@@ -31,18 +34,16 @@ const router = createRouter({
     { path: '/amis', name: 'AmisView', component: AmisView },
     { path: '/profil', name: 'ProfilView', component: ProfilView },
     { path: '/connexion', name: 'connexionView', component: ConnexionView },
+    { path: '/mentionlegale', name: 'mentionView', component: mentionView },
 
     { path: '/creerMatch', name: 'CreerMatchView', component: CreerMatchView },
 
     { path: '/createEnregistre', name: 'CreateEnregistre', component: CreateEnregistre },
     { path: '/updateEnregistre', name: 'UpdateEnregistre', component: UpdateEnregistre },
 
-    { path: '/profilAmi/:id', name: 'ProfilAmiView', component: ProfilAmiView },
+    { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
 
 
-    //composant 
-    { path: '/MatchOrga', name: 'MatchOrgaView', component: MatchOrgaView },
-    { path: '/notif', name: 'NotifView', component: NotifView },
 
 
     //page 404 
