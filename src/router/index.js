@@ -16,6 +16,7 @@ import CreerMatchView from '../views/Match/CreerMatchView.vue'
 import CreerEnregistre from '../views/Enregistrement/CreerEnregistreView.vue'
 import ModifEnregistre from '../views/Enregistrement/ModifEnregistreView.vue'
 import CreateEnregistre from '../views/Enregistrement/CreateView.vue'
+import DeleteEnregistre from '../views/Enregistrement/DeleteView.vue'
 
 //Pages depuis Amis
 import ProfilAmiView from '../views/ProfilAmiView.vue'
@@ -42,6 +43,7 @@ const router = createRouter({
     { path: '/creerEnregistre', name: 'CreerEnregistre', component: CreerEnregistre },
     { path: '/modifEnregistre', name: 'ModifEnregistre', component: ModifEnregistre },
     { path: '/createEnregistre', name: 'CreateEnregistre', component: CreateEnregistre },
+    { path: '/deleteEnregistre', name: 'DeleteEnregistre', component: DeleteEnregistre },
 
     { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
 

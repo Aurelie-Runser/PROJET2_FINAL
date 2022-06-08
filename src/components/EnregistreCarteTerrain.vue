@@ -2,7 +2,6 @@
   <div class="w-max mx-auto rounded-2xl overflow-hidden shadow-md shadow-gray-500">
     <div
       class="
-        relative
         w-[350px]
         h-max
         p-2
@@ -12,8 +11,6 @@
         bg-white
         font-arial">
 
-      <buttonMoinsTerrain class="absolute top-3 right-3" />
-
       <img
         :src="image"
         alt="Terrain de basket"
@@ -22,7 +19,7 @@
 
       <div class="m-0 flex flex-col gap-3">
         <div>
-          <p class="text-base mb-1 mr-12">{{ nom }}</p>
+          <p class="text-base mb-1">{{ nom }}</p>
           <p class="text-sm text-gray-500">{{ adresse }}</p>
           <!-- Ajoutez ici la base donné-->
         </div>
@@ -47,11 +44,10 @@
 <script>
 import fleche from "./icons/flecheDistance.vue";
 import stars from "./icons/stars.vue";
-import buttonMoinsTerrain from "./icons/buttonMoinsTerrain.vue";
 
 export default {
   name: "petitcartTerrain",
-  components: { fleche, stars, buttonMoinsTerrain },
+  components: { fleche, stars },
 
   props: {
     nom: { type: String },
@@ -59,6 +55,7 @@ export default {
     image: { type: String },
     distance: { type: String },
     note: { type: String },
+    lien: { type: String },
   },
 };
 </script>

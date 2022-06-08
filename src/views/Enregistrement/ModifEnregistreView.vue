@@ -7,7 +7,7 @@
 
         <h1 class="m-5 text-xl font-arial font-bold">Favories</h1>
 
-        <RouterLink to="/createEnregistre">
+        <RouterLink to="/createEnregistre" class="block w-max">
           <button class="block
           w-max
           h-max
@@ -32,14 +32,23 @@
 
         <hr class="border-gray-500 w-11/12 mt-5 mx-auto" />
 
-        <div class="mx-auto w-max my-10 flex flex-col lg:flex-row lg:flex-wrap lg:w-full gap-10">
-            <EnregistreCarteTerrain v-for="t in listeTerrains" :key="t.id"
-                class="flex-none"
-                :nom="t.nom"
-                :adresse="t.adresse"
-                :note="t.note"
-                :distance="t.distance"
-                :image="t.photo"/>
+        <div class="mx-auto w-max my-10 flex flex-col lg:flex-row lg:flex-wrap lg:w-full gap-5">
+            <div v-for="t in listeTerrains" :key="t.id"
+            class="flex flex-col items-end">
+              <EnregistreCarteTerrain
+                  class="flex-none"
+                  :nom="t.nom"
+                  :adresse="t.adresse"
+                  :note="t.note"
+                  :distance="t.distance"
+                  :image="t.photo"/>
+
+              <div class="mt-1 flex">
+                <RouterLink  :to="{ name: 'DeleteEnregistre', params: { id: t.id } }">
+                  <buttonMoinsTerrain class="w-14 h-14"/>
+                </RouterLink>
+              </div>
+            </div>
         </div>
 
     <!--MENU-->
@@ -117,6 +126,7 @@ import AvatarGrayIcon from "../../components/icons/avatarGray.vue";
 
 import flecheRetour from "../../components/icons/flecheRetour.vue";
 import EnregistreCarteTerrain from "../../components/EnregistreCarteTerrain.vue";
+import buttonMoinsTerrain from "../../components/icons/buttonMoinsTerrain.vue";
 
 import {
   getFirestore,
@@ -149,6 +159,7 @@ export default {
 
     flecheRetour,
     EnregistreCarteTerrain,
+    buttonMoinsTerrain
   },
 
   data() {
@@ -166,7 +177,6 @@ export default {
       const firestore = getFirestore();
       const dbTerrains = collection(firestore, "Terrains");
       const query = await onSnapshot(dbTerrains, (snapshot) => {
-        console.log("query", query);
         this.listeTerrains = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -178,7 +188,6 @@ export default {
           getDownloadURL(spaceRef)
             .then((url) => {
               terrain.photo = url;
-              console.log("Terrain", terrain);
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
