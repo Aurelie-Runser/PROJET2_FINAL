@@ -27,7 +27,7 @@
     <p class="font-arial text-lg">Organisateur</p>
     <p class="text-gray-500 inline text-base">{{ organisateur }}</p>
     <div class="inline-block mx-4">
-      <noteVue2> 4.2 </noteVue2>
+      <noteVue2> {{ notevue }} </noteVue2>
     </div>
     <arrowdow class="w-6 inline" />
   </div>
@@ -50,6 +50,7 @@ export default {
     participants: { type: String },
     actuel: { type: String },
     organisateur: { type: String },
+    notevue: { type: String },
   },
 };
 </script>

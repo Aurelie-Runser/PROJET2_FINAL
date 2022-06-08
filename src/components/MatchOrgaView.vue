@@ -16,6 +16,7 @@
         :participants="participants"
         :actuel="actuel"
         :organisateur="organisateur"
+        :notevue="notevue"
       />
     </div>
   </div>
@@ -42,6 +43,7 @@ export default {
     participants: { type: String },
     actuel: { type: String },
     organisateur: { type: String },
+    notevue: { type: String },
   },
 };
 </script>
