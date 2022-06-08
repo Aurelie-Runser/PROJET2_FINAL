@@ -7,7 +7,7 @@
         alt="carte de Montbéliard"
       />
 
-      <div class="flex justify-">
+      <div class="flex">
         <loupe class="top-6 right-7 z-30 fixed" />
         <input
           type="text"
@@ -39,7 +39,8 @@
       <button
         ref="inner_rect"
         class="absolute top-3 left-72"
-        @click="CarteVisiblenotif = !CarteVisiblenotif"
+        @click="{CarteVisiblenotif = !CarteVisiblenotif;
+                CarteVisible = false}"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -51,7 +52,8 @@
       <!--Terrain de Tennis Silhouette -->
       <button
         class="absolute top-80 left-20"
-        @click="CarteVisiblenotif = !CarteVisiblenotif"
+        @click="{CarteVisiblenotif = !CarteVisiblenotif;
+                CarteVisible = false}"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -63,7 +65,8 @@
       <!--Stade de la Banane-->
       <button
         class="absolute top-[350px] left-[275px]"
-        @click="CarteVisible = !CarteVisible"
+        @click="{CarteVisible = !CarteVisible;
+                CarteVisiblenotif = false}"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -74,7 +77,8 @@
       <!--Terrain Chabaud -->
       <button
         class="absolute top-60 left-[630px]"
-        @click="CarteVisible = !CarteVisible"
+        @click="{CarteVisible = !CarteVisible;
+                CarteVisiblenotif = false}"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -85,7 +89,8 @@
       <!--Terrain de Basket Châteaudun -->
       <button
         class="absolute top-32 left-96"
-        @click="CarteVisible = !CarteVisible"
+        @click="{CarteVisible = !CarteVisible;
+                CarteVisiblenotif = false}"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -96,7 +101,8 @@
       <!--Skatepark Pascal Pané -->
       <button
         class="absolute top-56 left-96"
-        @click="CarteVisiblenotif = !CarteVisiblenotif"
+        @click="{CarteVisiblenotif = !CarteVisiblenotif;
+                CarteVisible = false}"
       >
         <div class="w-max h-max relative">
           <skatenotif class="absolute top-1 w-14 left-3" />
@@ -106,7 +112,8 @@
       <!--Parcours sportif du bois de Courcelles -->
       <button
         class="absolute top-[600px] left-80"
-        @click="CarteVisible = !CarteVisible"
+        @click="{CarteVisible = !CarteVisible;
+                CarteVisiblenotif = false}"
       >
         <div class="w-max h-max relative">
           <Ping class="w-12 h-auto" />
@@ -120,16 +127,11 @@
       note="4.7"
       distance="4.3km"
       image="public\basket1.jpg"
-      class="
-        bg-white
-        fixed
-        -bottom-40
-        left-0
-        right-0
+      class="z-10
         duration-500
         transition-transform
       "
-      :class="{ '-translate-y-96': CarteVisible }"
+      :class="{ '-translate-y-72': CarteVisible }"
     />
 
     <GrandeCarteTerrainNotif
@@ -137,23 +139,24 @@
         {
           MatchOrgaView = !MatchOrgaView;
           boutonorga = !boutonorga;
+          CarteVisiblenotif = false
         }
       "
       nom="Skatepark Harley Davidson"
       note="4.7"
       distance="4.3km"
       image="public\basket1.jpg"
-      class="bg-white fixed -bottom-10 duration-500 transition-transform"
-      :class="{ '-translate-y-96': CarteVisiblenotif }"
+      class="z-10 duration-500 transition-transform"
+      :class="{ '-translate-y-72': CarteVisiblenotif }"
     />
 
-    <MatchOrgaView :class="{ '-translate-y-[1000px]': MatchOrgaView }" />
+    <MatchOrgaView class="z-0 duration-500 transition-transform"
+        :class="{ '-translate-y-[750px]': MatchOrgaView }" />
 
-    <boutonorga
-      :class="{ '-translate-y-[1300px]': boutonorga }"
+    <boutonorga class="z-10 duration-700 transition-transform"
+      :class="{ '-translate-y-[200px]': boutonorga }"
       @click="
         {
-          CarteVisiblenotif = !CarteVisiblenotif;
           MatchOrgaView = !MatchOrgaView;
           boutonorga = !boutonorga;
         }
@@ -166,7 +169,7 @@
 
     <!--MENU-->
     <div
-      class="
+      class="z-10
         fixed
         bottom-0
         left-0

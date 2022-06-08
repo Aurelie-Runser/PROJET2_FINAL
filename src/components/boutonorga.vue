@@ -1,12 +1,11 @@
 <template>
-  <div class="flex space-x-2 justify-center">
+  <div class="fixed left-0 right-0 mx-auto w-max h-max">
     <button
       type="button"
-      class="
+      class="block
         w-52
         h-12
         lg:h-10 lg:text-lg
-        mt-9
         bg-green-550
         text-white
         font-medium
@@ -18,9 +17,6 @@
         hover:bg-green-700 hover:shadow-lg
         focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0
         active:bg-green-700 active:shadow-lg
-        transition
-        duration-150
-        ease-in-out
       "
     >
       Participer

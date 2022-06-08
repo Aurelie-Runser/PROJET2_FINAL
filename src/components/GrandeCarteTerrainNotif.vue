@@ -1,45 +1,47 @@
 <template>
-  <div
-    class="
-      relative
-      w-full
-      h-max
-      p-2
-      grid
-      grid-cols-[max-content_minmax(auto,auto)]
-      gap-5
-      rounded-2xl
-      overflow-hidden
-      shadow-md shadow-gray-500
-      font-arial
-      border
-    "
-  >
-    <notif class="absolute -top-2 -right-1" />
+  <div class="fixed -bottom-40 left-0 right-0 w-max mx-auto rounded-2xl overflow-hidden shadow-md shadow-gray-500">
+    <div
+      class="
+        relative
+        w-[350px]
+        h-max
+        p-2
+        grid
+        grid-cols-[max-content_minmax(auto,auto)]
+        gap-5
+        rounded-2xl
+        overflow-hidden
+        shadow-md shadow-gray-500
+        font-arial
+        bg-white
+      "
+    >
+      <notif class="absolute -top-2 -right-1" />
 
-    <img
-      :src="image"
-      alt="Terrain de basket"
-      class="m-0 w-28 h-full object-cover rounded-2xl"
-    />
+      <img
+        :src="image"
+        alt="Terrain de basket"
+        class="m-0 w-28 h-full object-cover rounded-2xl"
+      />
 
-    <div class="m-0 flex flex-col gap-3">
-      <div>
-        <p class="text-base mb-1 mr-12">{{ nom }}</p>
-        <p class="text-sm text-gray-500">{{ adresse }}</p>
-        <!-- Ajoutez ici la base donné-->
-      </div>
-
-      <div class="flex justify-around items-center text-lg">
-        <div class="flex items-center gap-1 p-2 bg-gray-200 rounded-xl">
-          <stars class="h-5" />
-          <p class="text-sm text-gray-600">{{ note }}</p>
-          <!--base de donnée-->
+      <div class="m-0 flex flex-col gap-3">
+        <div>
+          <p class="text-base mb-1 mr-12">{{ nom }}</p>
+          <p class="text-sm text-gray-500">{{ adresse }}</p>
+          <!-- Ajoutez ici la base donné-->
         </div>
-        <div class="flex items-center gap-1 p-2 bg-gray-200 rounded-xl">
-          <fleche class="h-5" />
-          <p class="text-sm text-gray-600">{{ distance }}</p>
-          <!--base de donnée-->
+
+        <div class="flex justify-around items-center text-lg">
+          <div class="flex items-center gap-1 p-2 bg-gray-200 rounded-xl">
+            <stars class="h-5" />
+            <p class="text-sm text-gray-600">{{ note }}</p>
+            <!--base de donnée-->
+          </div>
+          <div class="flex items-center gap-1 p-2 bg-gray-200 rounded-xl">
+            <fleche class="h-5" />
+            <p class="text-sm text-gray-600">{{ distance }}</p>
+            <!--base de donnée-->
+          </div>
         </div>
       </div>
     </div>
