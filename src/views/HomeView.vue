@@ -133,6 +133,12 @@
     />
 
     <GrandeCarteTerrainNotif
+      @click="
+        {
+          MatchOrgaView = !MatchOrgaView;
+          boutonorga = !boutonorga;
+        }
+      "
       nom="Skatepark Harley Davidson"
       note="4.7"
       distance="4.3km"
@@ -141,12 +147,24 @@
       :class="{ '-translate-y-96': CarteVisiblenotif }"
     />
 
+    <MatchOrgaView :class="{ '-translate-y-[1000px]': MatchOrgaView }" />
+
+    <boutonorga
+      :class="{ '-translate-y-[1300px]': boutonorga }"
+      @click="
+        {
+          CarteVisiblenotif = !CarteVisiblenotif;
+          MatchOrgaView = !MatchOrgaView;
+          boutonorga = !boutonorga;
+        }
+      "
+    />
+
     <RouterLink to="/creerMatch">
       <buttonPlusMap class="fixed right-4 bottom-28" />
     </RouterLink>
 
     <!--MENU-->
-
     <div
       class="
         fixed
@@ -215,6 +233,7 @@
 </style>
 
 <script>
+import boutonorga from "../components/boutonorga.vue";
 import loupe from "../components/icons/loupe.vue";
 import rednotif from "../components/icons/iconsPing/rednotif.vue";
 import skatenotif from "../components/icons/iconsPing/skatenotif.vue";
@@ -227,6 +246,7 @@ import RunPing from "../components/icons/iconsPing/RunIcon.vue";
 import carteTerrainPlus from "../components/carteTerrainPlus.vue";
 
 import GrandeCarteTerrainNotif from "../components/GrandeCarteTerrainNotif.vue";
+import MatchOrgaView from "../components/MatchOrgaView.vue";
 
 import buttonPlusMap from "../components/icons/buttonPlusMap.vue";
 
@@ -239,6 +259,8 @@ import GrandeCarteTerrain from "../components/GrandeCarteTerrain.vue";
 export default {
   name: "HomeView",
   components: {
+    boutonorga,
+    MatchOrgaView,
     loupe,
     rednotif,
     skatenotif,
@@ -275,6 +297,8 @@ export default {
     return {
       CarteVisible: false,
       CarteVisiblenotif: false,
+      MatchOrgaView: false,
+      boutonorga: false,
     };
   },
 };

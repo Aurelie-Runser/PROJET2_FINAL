@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-4">
+  <div class="p-5 mt-0 h-screen bg-white rounded-xl overflow-hidden">
     <p class="mt-5 text-lg font-arial">Match organisé</p>
     <div class="h-8"></div>
     <info-match-orga
