@@ -68,13 +68,11 @@
 
       <p>{{message}}</p>
 
-        <RouterLink to="/profil">
           <button
             type="submit"
             class="block w-max h-max p-5 mx-auto my-10 bg-green-450 text-white font-arial font-bold text-xl uppercase rounded-xl shadow-md hover:bg-green-550 hover:shadow-lg focus:bg-green-550 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-550 active:shadow-lg transition duration-150 ease-in-out">
             Se connecter
           </button>
-        </RouterLink>
 
         <RouterLink to="/profil">
           <button
