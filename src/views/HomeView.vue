@@ -35,23 +35,7 @@
           placeholder="Votre recherche "
         />
       </div>
-      <!--Stade Annequin-->
-      <button
-        ref="inner_rect"
-        class="absolute top-3 left-72"
-        @click="
-          {
-            CarteVisiblenotif = !CarteVisiblenotif;
-            CarteVisible = false;
-          }
-        "
-      >
-        <div class="w-max h-max relative">
-          <Ping class="w-14 h-auto" />
-          <FootPing class="absolute top-1 left-3" />
-          <rednotif class="absolute top-1 left-9" />
-        </div>
-      </button>
+      
 
       <!--Terrain de Tennis Silhouette -->
       <button
@@ -60,6 +44,14 @@
           {
             CarteVisiblenotif = !CarteVisiblenotif;
             CarteVisible = false;
+            MatchOrgaView = false;
+            MatchOrgaView2 = false;
+            boutonorga = false;
+            CarteVisiblerun = false;
+            CarteVisiblefoot1 = false;
+            CarteVisiblefoot2 = false;
+            CarteVisiblenotifskate = false;
+            MatchOrgaViewtennis = false;
           }
         "
       >
@@ -77,9 +69,14 @@
           {
             CarteVisiblefoot2 = !CarteVisiblefoot2;
             CarteVisiblenotif = false;
-
             CarteVisible = false;
+            MatchOrgaView = false;
+            MatchOrgaView2 = false;
+            boutonorga = false;
+            CarteVisiblerun = false;
             CarteVisiblefoot1 = false;
+            CarteVisiblenotifskate = false;
+            MatchOrgaViewtennis = false;
           }
         "
       >
@@ -96,11 +93,14 @@
           {
             CarteVisiblefoot1 = !CarteVisiblefoot1;
             CarteVisiblenotif = false;
-            CarteVisiblenotifskate = false;
             CarteVisible = false;
-
+            MatchOrgaView = false;
+            MatchOrgaView2 = false;
+            boutonorga = false;
+            CarteVisiblerun = false;
             CarteVisiblefoot2 = false;
-            CarteVisiblenotif = false;
+            CarteVisiblenotifskate = false;
+            MatchOrgaViewtennis = false;
           }
         "
       >
@@ -116,11 +116,15 @@
         @click="
           {
             CarteVisible = !CarteVisible;
-            CarteVisiblenotif = false;
             CarteVisiblefoot1 = false;
+            CarteVisiblenotif = false;
+            MatchOrgaView = false;
+            MatchOrgaView2 = false;
+            boutonorga = false;
+            CarteVisiblerun = false;
             CarteVisiblefoot2 = false;
-
             CarteVisiblenotifskate = false;
+            MatchOrgaViewtennis = false;
           }
         "
       >
@@ -138,8 +142,13 @@
             CarteVisiblenotifskate = !CarteVisiblenotifskate;
             CarteVisible = false;
             CarteVisiblefoot1 = false;
-            CarteVisiblefoot2 = false;
             CarteVisiblenotif = false;
+            MatchOrgaView = false;
+            MatchOrgaView2 = false;
+            boutonorga = false;
+            CarteVisiblerun = false;
+            CarteVisiblefoot2 = false;
+            MatchOrgaViewtennis = false;
           }
         "
       >
@@ -154,11 +163,15 @@
         @click="
           {
             CarteVisiblerun = !CarteVisiblerun;
-            CarteVisiblenotif = false;
             CarteVisible = false;
             CarteVisiblefoot1 = false;
-            CarteVisiblefoot2 = false;
             CarteVisiblenotif = false;
+            MatchOrgaView = false;
+            MatchOrgaView2 = false;
+            boutonorga = false;
+            CarteVisiblefoot2 = false;
+            CarteVisiblenotifskate = false;
+            MatchOrgaViewtennis = false;
           }
         "
       >
@@ -209,8 +222,15 @@
       @click="
         {
           MatchOrgaView = !MatchOrgaView;
-          boutonorga = !boutonorga;
+          boutonorga = true;
           CarteVisiblenotif = false;
+          CarteVisible = false;
+          CarteVisiblefoot1 = false;
+          MatchOrgaView2 = false;
+          CarteVisiblerun = false;
+          CarteVisiblefoot2 = false;
+          CarteVisiblenotifskate = false;
+          MatchOrgaViewtennis = false;
         }
       "
       nom="Terrain de tennis Hanckock"
@@ -225,8 +245,16 @@
       @click="
         {
           MatchOrgaViewtennis = !MatchOrgaViewtennis;
-          boutonorga = !boutonorga;
+          boutonorga = true;
           CarteVisiblenotifskate = false;
+          CarteVisiblenotif = false;
+          CarteVisible = false;
+          CarteVisiblefoot1 = false;
+          MatchOrgaView = false;
+          MatchOrgaView2 = false;
+          CarteVisiblerun = false;
+          CarteVisiblefoot2 = false;
+          MatchOrgaView = false;
         }
       "
       nom="Skatepark Pascal Pané"
@@ -401,19 +429,6 @@ export default {
     FriendsGrayIcon,
     AvatarGrayIcon,
   },
-
-  /*
-  setup(props, context) {
-    let d = useInputModel(props, context.emit, "modelValue");
-    const inner_rect = ref(null);
-    useClickOutside(inner_rect, () => {
-      d.value = false;
-    });
-    return {
-      inner_rect,
-      d,
-    };
-  }, */
 
   data() {
     return {

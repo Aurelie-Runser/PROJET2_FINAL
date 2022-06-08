@@ -43,16 +43,6 @@
       </RouterLink>
     </div>
 
-    <div class="grid grid-cols-2">
-      <div>
-        <p class="font-arial mt-2">Skatepark</p>
-        <p class="text-xs font-bold text-gray-500 inline">
-          2 enregistrement✏️
-        </p>
-      </div>
-    </div>
-    <div class="h-32"></div>
-
   <!--Menu-->
     <div
       class="
