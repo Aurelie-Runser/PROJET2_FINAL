@@ -22,7 +22,7 @@
             mx-auto
             fixed
             w-11/12
-            focus:border-green-550
+            focus:border-green-550 focus:ring-green-550
             h-10
             my-4
             font-arial
@@ -51,11 +51,12 @@
       <!--Terrain de Tennis Silhouette -->
       <button
         class="absolute top-80 left-20"
-        @click="CarteVisible = !CarteVisible"
+        @click="CarteVisiblenotif = !CarteVisiblenotif"
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
           <TennisPing class="absolute top-1 left-3" />
+          <rednotif class="absolute top-1 left-9" />
         </div>
       </button>
 
