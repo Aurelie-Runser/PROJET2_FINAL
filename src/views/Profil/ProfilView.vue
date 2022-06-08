@@ -25,26 +25,38 @@
 
       <div class="w-max absolute left-0 right-0 mx-auto -bottom-10">
         <div class="relative w-24 h-24">
+          <img
+            class="h-full rounded-full object-cover"
+            :src="p.avatar"
+            alt="avatar"
+          />
+          
           <RouterLink :to="{ name: 'UpdateProfil', params: { id: p.id } }">
-            <img
-              class="h-full rounded-full object-cover"
-              :src="p.avatar"
-              alt="avatar"
-            />
+            <photo-vue class="absolute right-0 bottom-0" />
           </RouterLink>
-
-          <photo-vue class="absolute right-0 bottom-0" />
         </div>
       </div>
     </div>
 
-    <h2 class="text-center mt-14 mb-5 text-3xl font-medium">
-      {{ p.prenom }} {{ p.Nom }}
-    </h2>
+    <div class="flex items-center justify-center gap-3 mt-14 mb-5">
+      <h2 class="text-3xl font-medium">
+        {{ p.prenom }} {{ p.Nom }}
+      </h2>
+
+      <RouterLink :to="{ name: 'UpdateProfil', params: { id: p.id } }">
+        <button class=" text-xl font-medium">✏️</button>
+      </RouterLink>
+    </div>
 
     <noteVue>{{ p.Note }}</noteVue>
 
-    <p class="ml-2 pb-2">{{ p.description }}</p>
+    <div class="m-5">
+      <p class="text-lg">{{ p.description }}</p>
+
+      <RouterLink :to="{ name: 'UpdateProfil', params: { id: p.id } }">
+        <button class="text-xl font-medium">✏️</button>
+      </RouterLink>
+    </div>
 
     <div class="grid grid-cols-3 justify-center">
       <BoxVue :nbr="p.Nbr_match_organise" texte="Match organisés " />
