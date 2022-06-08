@@ -5,9 +5,9 @@
             <flecheRetour class="m-5"/>
         </RouterLink>
 
-        <h1 class="m-5 text-xl font-arial font-bold">Terrain de Frambouhans</h1>
+        <h1 class="m-5 text-xl font-arial font-bold">Favories</h1>
 
-        <RouterLink to="/createEnregistre">>
+        <RouterLink to="/createEnregistre">
           <button class="block
           w-max
           h-max

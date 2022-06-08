@@ -284,7 +284,7 @@ export default {
             }
             const firestore = getFirestore();
             await updateDoc(doc(firestore, "Profils", this.$route.params.id), this.Profils);
-            this.$router.push('/profil');       
+            this.$router.push("/profil");        
         }
   },
 
