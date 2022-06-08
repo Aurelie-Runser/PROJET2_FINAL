@@ -139,7 +139,22 @@
         </div>
       </div>
 
-      <p>{{ message }}</p>
+      <div
+        class="
+          mt-5
+          flex
+          border-2
+          rounded-xl
+          text-lg
+          font-medium
+          justify-center
+          p-1
+          border-green-550
+          text-center text-green-550
+        "
+      >
+        <p>{{ message }}</p>
+      </div>
 
       <button
         type="submit"
