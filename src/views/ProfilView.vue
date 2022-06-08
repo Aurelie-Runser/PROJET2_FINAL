@@ -1,5 +1,6 @@
 <template>
-  <div class="max-w-5xl m-auto">
+  <div v-for="p in listeProfils" :key="p.id"
+        class="max-w-5xl m-auto">
     <div class="w-auto h-12 bg-gray-500">
       <p
         class="
@@ -13,25 +14,28 @@
       </p>
     </div>
 
-    <div class="relative mt-9 w-11/12 mx-auto ml-auto">
-      <img
-        class="w-full aspect-video md:aspect-[9/3] rounded-2xl"
-        alt="banniere"
-        src="../../public/images/banniere__profile.jpg"
-      />
+    <div
+      class="relative mt-9 w-11/12 mx-auto ml-auto">
+      <div class="w-full aspect-video md:aspect-[9/3] rounded-2xl overflow-hidden">
+        <img
+          class="object-cover"
+          alt="banniere"
+          :src="p.banniere"
+        />
+      </div>
       <photo-vue class="absolute -bottom-2 -right-1" />
 
       <div class="w-max absolute left-0 right-0 mx-auto -bottom-10">
-        <div class="relative">
-          <img class="w-24" src="../../public/images/homme.png" alt="avatar" />
+        <div class="relative rounded-full overflow-hidden w-24 h-24">
+          <img class="h-full object-cover" :src="p.avatar" alt="avatar" />
           <photo-vue class="absolute right-0 bottom-0" />
         </div>
       </div>
     </div>
 
-    <h2 class="text-center mt-14 mb-5 text-3xl font-medium">Antoine Perez</h2>
+    <h2 class="text-center mt-14 mb-5 text-3xl font-medium">{{p.prenom}} {{p.Nom}}</h2>
 
-    <noteVue> 4.5 </noteVue>
+    <noteVue>{{p.Note}}</noteVue>
 
     <textarea
       name="regleMatch"
@@ -45,9 +49,9 @@
     ></textarea>
 
     <div class="grid grid-cols-3 justify-center">
-      <BoxVue nbr="19" texte="Match organisés " />
-      <BoxVue nbr="34" texte="Match joué " />
-      <BoxVue nbr="21" texte="Médailles" />
+      <BoxVue :nbr=p.Nbr_match_organise texte="Match organisés " />
+      <BoxVue :nbr=p.Nbr_match_joue texte="Match joué " />
+      <BoxVue nbr="5" texte="Médailles" />
     </div>
 
     <h2 class="mt-10 ml-3 text-3xl font-medium">Médailles ✏️</h2>
@@ -66,10 +70,7 @@
       <Friends image="/public/images/Paul2.png" txt="Paul Montavon" />
       <Friends image="/public/images/Judie.png" txt="Judie Winehouse " />
       <Friends image="/public/images/Nathanael.png" txt="Nathanaël Desmeules" />
-      <Friends
-        image="/public/images/Christopher.png"
-        txt="Christopher Mccandless "
-      />
+      <Friends image="/public/images/Christopher.png" txt="Christopher Mccandless "/>
       <Friends image="/public/images/Marion.png" txt="Marion Comeira" />
     </div>
 
@@ -161,11 +162,6 @@
 </template>
 
 
-
-
-
-
-
 <script>
 import BoussoleGrayIcon from "../components/icons/boussoleGray.vue";
 import EnregistreWhiteIcon from "../components/icons/enregistrementWhite.vue";
@@ -179,6 +175,27 @@ import BoxVue from "../components/icons/box.vue";
 import medaillesVue from "../components/icons/medailles.vue";
 import FriendsVue from "../components/icons/friends.vue";
 import Friends from "../components/icons/friends2.vue";
+
+import{
+  getFirestore,
+  collection,
+  doc,
+  getDoc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  orderBy
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js"
+
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+  uploadString,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js"
+
 
 export default {
   name: "ProfilView",
@@ -196,5 +213,55 @@ export default {
     FriendsVue,
     Friends,
   },
+
+  data(){
+    return{
+      listeProfils:[]
+    }
+  },
+
+  mounted(){
+    this.getProfils();
+  },
+
+  methods: {
+
+    async getProfils() {
+    const firestore = getFirestore();
+    const dbProfils = collection(firestore, "Profils");
+    const query = await onSnapshot(dbProfils, (snapshot) => {
+        console.log("query", query);
+      this.listeProfils = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      this.listeProfils.forEach(function (profil) {
+        const storage = getStorage();
+        const spaceRef = ref(storage, "avatar/" + profil.avatar);
+        getDownloadURL(spaceRef)
+          .then((url) => {
+            profil.avatar = url;
+            console.log("profil", profil);
+          })
+          .catch((error) => {
+            console.log("erreur downloadUrl", error);
+          });
+          
+        const spaceRef2 = ref(storage, "banniere/" + profil.banniere);
+        getDownloadURL(spaceRef2)
+          .then((url) => {
+            profil.banniere = url;
+            console.log("profil", profil);
+          })
+          .catch((error) => {
+            console.log("erreur downloadUrl", error);
+          });
+        });
+        console.log("listeProfil", this.listeProfils);
+      });
+    },
+  },
+
 };
 </script>
