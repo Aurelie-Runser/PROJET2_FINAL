@@ -187,6 +187,7 @@ export default {
     EnregistreWhiteIcon,
     FriendsGrayIcon,
     AvatarGreenIcon,
+    
     photoVue,
     noteVue,
     starsVue,
