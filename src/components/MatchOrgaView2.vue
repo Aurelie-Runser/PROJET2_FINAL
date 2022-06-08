@@ -4,18 +4,18 @@
       <p class="mt-5 text-lg font-arial">Match organisé</p>
       <div class="h-8"></div>
       <info-match-orga
-        :image="image"
-        :sport="sport"
-        :nom="nom"
-        :regle="regle"
+        image="public\terrainfoot2.jpg"
+        sport="public\images\ballonfoot.png"
+        nom="Test"
+        regle="Match de foot 6 contre 6 "
       />
 
       <Detaillematchorga
-        :date="date"
-        :heure="heure"
-        :participants="participants"
-        :actuel="actuel"
-        :organisateur="organisateur"
+        date="Vendredi 10 Juin "
+        heure="8h00"
+        participants="  74 participants "
+        actuel="(68 actuellement)  "
+        organisateur="David Malsot"
       />
     </div>
   </div>
@@ -31,17 +31,6 @@ export default {
   components: {
     infoMatchOrga,
     Detaillematchorga,
-  },
-  props: {
-    date: { type: String },
-    nom: { type: String },
-    sport: { type: String },
-    image: { type: String },
-    regle: { type: String },
-    heure: { type: String },
-    participants: { type: String },
-    actuel: { type: String },
-    organisateur: { type: String },
   },
 };
 </script>

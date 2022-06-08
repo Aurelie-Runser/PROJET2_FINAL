@@ -39,8 +39,12 @@
       <button
         ref="inner_rect"
         class="absolute top-3 left-72"
-        @click="{CarteVisiblenotif = !CarteVisiblenotif;
-                CarteVisible = false}"
+        @click="
+          {
+            CarteVisiblenotif = !CarteVisiblenotif;
+            CarteVisible = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -52,8 +56,12 @@
       <!--Terrain de Tennis Silhouette -->
       <button
         class="absolute top-80 left-20"
-        @click="{CarteVisiblenotif = !CarteVisiblenotif;
-                CarteVisible = false}"
+        @click="
+          {
+            CarteVisiblenotif = !CarteVisiblenotif;
+            CarteVisible = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -65,8 +73,15 @@
       <!--Stade de la Banane-->
       <button
         class="absolute top-[350px] left-[275px]"
-        @click="{CarteVisible = !CarteVisible;
-                CarteVisiblenotif = false}"
+        @click="
+          {
+            CarteVisiblefoot2 = !CarteVisiblefoot2;
+            CarteVisiblenotif = false;
+
+            CarteVisible = false;
+            CarteVisiblefoot1 = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -77,8 +92,17 @@
       <!--Terrain Chabaud -->
       <button
         class="absolute top-60 left-[630px]"
-        @click="{CarteVisible = !CarteVisible;
-                CarteVisiblenotif = false}"
+        @click="
+          {
+            CarteVisiblefoot1 = !CarteVisiblefoot1;
+            CarteVisiblenotif = false;
+            CarteVisiblenotifskate = false;
+            CarteVisible = false;
+
+            CarteVisiblefoot2 = false;
+            CarteVisiblenotif = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -89,8 +113,16 @@
       <!--Terrain de Basket Châteaudun -->
       <button
         class="absolute top-32 left-96"
-        @click="{CarteVisible = !CarteVisible;
-                CarteVisiblenotif = false}"
+        @click="
+          {
+            CarteVisible = !CarteVisible;
+            CarteVisiblenotif = false;
+            CarteVisiblefoot1 = false;
+            CarteVisiblefoot2 = false;
+
+            CarteVisiblenotifskate = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <Ping class="w-14 h-auto" />
@@ -101,8 +133,15 @@
       <!--Skatepark Pascal Pané -->
       <button
         class="absolute top-56 left-96"
-        @click="{CarteVisiblenotif = !CarteVisiblenotif;
-                CarteVisible = false}"
+        @click="
+          {
+            CarteVisiblenotifskate = !CarteVisiblenotifskate;
+            CarteVisible = false;
+            CarteVisiblefoot1 = false;
+            CarteVisiblefoot2 = false;
+            CarteVisiblenotif = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <skatenotif class="absolute top-1 w-14 left-3" />
@@ -112,8 +151,16 @@
       <!--Parcours sportif du bois de Courcelles -->
       <button
         class="absolute top-[600px] left-80"
-        @click="{CarteVisible = !CarteVisible;
-                CarteVisiblenotif = false}"
+        @click="
+          {
+            CarteVisiblerun = !CarteVisiblerun;
+            CarteVisiblenotif = false;
+            CarteVisible = false;
+            CarteVisiblefoot1 = false;
+            CarteVisiblefoot2 = false;
+            CarteVisiblenotif = false;
+          }
+        "
       >
         <div class="w-max h-max relative">
           <Ping class="w-12 h-auto" />
@@ -123,14 +170,38 @@
     </div>
 
     <GrandeCarteTerrain
-      nom="Skatepark Harley Davidson"
-      note="4.7"
-      distance="4.3km"
+      nom="Terrain Chabaud"
+      note="3.1"
+      distance="1.8 km"
+      image="public\terrainfoot2.jpg"
+      class="z-10 duration-500 transition-transform"
+      :class="{ '-translate-y-72': CarteVisiblefoot1 }"
+    />
+
+    <GrandeCarteTerrain
+      nom="Stade de la Banane"
+      note="4"
+      distance="450 m"
+      image="public\stade_banane.jpg"
+      class="z-10 duration-500 transition-transform"
+      :class="{ '-translate-y-72': CarteVisiblefoot2 }"
+    />
+
+    <GrandeCarteTerrain
+      nom="parcours bois courcelles"
+      note="4.3"
+      distance="2.2 km"
+      image="public\parcours_courcelles.jpg"
+      class="z-10 duration-500 transition-transform"
+      :class="{ '-translate-y-72': CarteVisiblerun }"
+    />
+
+    <GrandeCarteTerrain
+      nom="Terrain de Basket Châteaudun"
+      note="3.8"
+      distance="210 m"
       image="public\basket1.jpg"
-      class="z-10
-        duration-500
-        transition-transform
-      "
+      class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisible }"
     />
 
@@ -139,25 +210,66 @@
         {
           MatchOrgaView = !MatchOrgaView;
           boutonorga = !boutonorga;
-          CarteVisiblenotif = false
+          CarteVisiblenotif = false;
         }
       "
-      nom="Skatepark Harley Davidson"
-      note="4.7"
-      distance="4.3km"
-      image="public\basket1.jpg"
+      nom="Terrain de tennis Hanckock"
+      note="3.5"
+      distance="4.3 km"
+      image="public\terraintennis.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisiblenotif }"
     />
 
-    <MatchOrgaView class="z-0 duration-500 transition-transform"
-        :class="{ '-translate-y-[750px]': MatchOrgaView }" />
+    <GrandeCarteTerrainNotif
+      @click="
+        {
+          MatchOrgaViewtennis = !MatchOrgaViewtennis;
+          boutonorga = !boutonorga;
+          CarteVisiblenotifskate = false;
+        }
+      "
+      nom="Skatepark Pascal Pané"
+      note="4.6"
+      distance="200 m"
+      image="public\skatepark_pane.jpg"
+      class="z-10 duration-500 transition-transform"
+      :class="{ '-translate-y-72': CarteVisiblenotifskate }"
+    />
 
-    <boutonorga class="z-10 duration-700 transition-transform"
+    <MatchOrgaView
+      date="jeudi 9 juin"
+      heure="16:00"
+      actuel="1 participant"
+      organisateur="Tedy Vincent"
+      image="public\terraintennis.jpg"
+      sport="public/images/tennis.png"
+      regle="Match de tennis en 2 sets 6 jeux "
+      nom="Terrain de tennis Hanckock"
+      class="z-0 duration-500 transition-transform"
+      :class="{ '-translate-y-[750px]': MatchOrgaView }"
+    />
+
+    <MatchOrgaView
+      date="jeudi 9 juin"
+      heure="14:30"
+      actuel="7 participants"
+      organisateur="Anthony Hawk"
+      image="public\skatepark_pane.jpg"
+      sport="public/images/skate.png"
+      regle="apres midi détente"
+      nom="Skatepark Pascal Pane"
+      class="z-0 duration-500 transition-transform"
+      :class="{ '-translate-y-[750px]': MatchOrgaViewtennis }"
+    />
+
+    <boutonorga
+      class="z-10 duration-700 transition-transform"
       :class="{ '-translate-y-[200px]': boutonorga }"
       @click="
         {
-          MatchOrgaView = !MatchOrgaView;
+          MatchOrgaViewtennis = false;
+          MatchOrgaView = false;
           boutonorga = !boutonorga;
         }
       "
@@ -169,7 +281,8 @@
 
     <!--MENU-->
     <div
-      class="z-10
+      class="
+        z-10
         fixed
         bottom-0
         left-0
@@ -236,6 +349,7 @@
 </style>
 
 <script>
+import GrandeCarteTerrainRun from "../components/GrandeCarteTerrainRun.vue";
 import boutonorga from "../components/boutonorga.vue";
 import loupe from "../components/icons/loupe.vue";
 import rednotif from "../components/icons/iconsPing/rednotif.vue";
@@ -250,6 +364,7 @@ import carteTerrainPlus from "../components/carteTerrainPlus.vue";
 
 import GrandeCarteTerrainNotif from "../components/GrandeCarteTerrainNotif.vue";
 import MatchOrgaView from "../components/MatchOrgaView.vue";
+import MatchOrgaView2 from "../components/MatchOrgaView2.vue";
 
 import buttonPlusMap from "../components/icons/buttonPlusMap.vue";
 
@@ -262,7 +377,9 @@ import GrandeCarteTerrain from "../components/GrandeCarteTerrain.vue";
 export default {
   name: "HomeView",
   components: {
+    GrandeCarteTerrainRun,
     boutonorga,
+    MatchOrgaView2,
     MatchOrgaView,
     loupe,
     rednotif,
@@ -301,7 +418,14 @@ export default {
       CarteVisible: false,
       CarteVisiblenotif: false,
       MatchOrgaView: false,
+      MatchOrgaView2: false,
       boutonorga: false,
+      CarteVisiblerun: false,
+      CarteVisiblefoot1: false,
+      CarteVisiblefoot2: false,
+      CarteVisiblenotifskate: false,
+
+      MatchOrgaViewtennis: false,
     };
   },
 };
