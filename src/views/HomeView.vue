@@ -7,6 +7,34 @@
         alt="carte de Montbéliard"
       />
 
+      <div class="flex justify-">
+        <loupe class="top-6 right-7 z-30 fixed" />
+        <input
+          type="text"
+          v-model="filter"
+          class="
+            border-2
+            z-20
+            top-1
+            left-0
+            float-left
+            right-0
+            mx-auto
+            fixed
+            w-11/12
+            focus:border-green-550
+            h-10
+            my-4
+            font-arial
+            bg-white
+            text-gray-500 text-sm
+            rounded-3xl
+            pr-12
+            pl-2
+          "
+          placeholder="Votre recherche "
+        />
+      </div>
       <!--Stade Annequin-->
       <button
         ref="inner_rect"
@@ -186,6 +214,7 @@
 </style>
 
 <script>
+import loupe from "../components/icons/loupe.vue";
 import rednotif from "../components/icons/iconsPing/rednotif.vue";
 import skatenotif from "../components/icons/iconsPing/skatenotif.vue";
 import Ping from "../components/icons/ping.vue";
@@ -209,6 +238,7 @@ import GrandeCarteTerrain from "../components/GrandeCarteTerrain.vue";
 export default {
   name: "HomeView",
   components: {
+    loupe,
     rednotif,
     skatenotif,
     GrandeCarteTerrain,
