@@ -43,7 +43,10 @@
                   :distance="t.distance"
                   :image="t.photo"/>
 
-              <div class="mt-1 flex">
+              <div class="mt-1 flex flex-row gap-2">
+                <RouterLink  :to="{ name: 'UpdateEnregistre', params: { id: t.id } }">
+                  <p class="border border-green-550 rounded-xl shadow-md p-1.5 text-xl">✏️</p>
+                </RouterLink>
                 <RouterLink  :to="{ name: 'DeleteEnregistre', params: { id: t.id } }">
                   <buttonMoinsTerrain class="w-14 h-14"/>
                 </RouterLink>
