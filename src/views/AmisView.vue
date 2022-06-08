@@ -26,7 +26,8 @@
     <h2 class="mt-7 ml-7">Connectés</h2>
     <div  v-for="a in listeAmisSearch" :key="a.id"
           class="grid mt-10 grid-cols-1">
-      <RouterLink to="/profilAmi">
+
+      <RouterLink :to="{name:'ProfilAmiView', params:{id:a.id}}">
         <Friends2 :image="a.avatar" :txt="a.prenom+' '+a.Nom" />
       </RouterLink>
     </div>

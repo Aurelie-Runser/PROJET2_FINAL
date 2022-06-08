@@ -23,8 +23,6 @@ import MatchOrgaView from '../components/MatchOrgaView.vue'
 import NotifView from '../components/GrandeCarteTerrainNotif.vue'
 
 
-
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -39,7 +37,7 @@ const router = createRouter({
     { path: '/createEnregistre', name: 'CreateEnregistre', component: CreateEnregistre },
     { path: '/updateEnregistre', name: 'UpdateEnregistre', component: UpdateEnregistre },
 
-    { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
+    { path: '/profilAmi/:id', name: 'ProfilAmiView', component: ProfilAmiView },
 
 
     //composant 
