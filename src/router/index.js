@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EnregistreView from '../views/Enregistrement/EnregistreView.vue'
 import AmisView from '../views/AmisView.vue'
-import ProfilView from '../views/ProfilView.vue'
+import ProfilView from '../views/Profil/ProfilView.vue'
 
 import Page404View from '../views/Page404View.vue'
 import ConnexionView from '../views/ConnexionView.vue'
@@ -18,12 +18,11 @@ import UpdateEnregistre from '../views/Enregistrement/UpdateView.vue'
 //Pages depuis Amis
 import ProfilAmiView from '../views/ProfilAmiView.vue'
 
+//Pages depuis Profil
+import UpdateProfil from "../views/Profil/UpdateView.vue"
+
 //mention legales 
 import mentionView from '../views/mentionView.vue'
-
-
-
-
 
 
 const router = createRouter({
@@ -43,15 +42,10 @@ const router = createRouter({
 
     { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
 
-
-
+    { path: '/updateProfil', name: 'UpdateProfil', component: UpdateProfil },
 
     //page 404 
-    {
-      path: '/:catchAll(.*)',
-      name: 'Page404View',
-      component: Page404View
-    },
+    { path: '/:catchAll(.*)', name: 'Page404View', component: Page404View },
 
 
   ]

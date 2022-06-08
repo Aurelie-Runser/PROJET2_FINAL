@@ -19,11 +19,17 @@
       >
         <img class="object-cover" alt="banniere" :src="p.banniere" />
       </div>
-      <photo-vue class="absolute -bottom-2 -right-1" />
+      <RouterLink :to="{name:'UpdateProfil', params:{id:p.id}}">
+        <photo-vue class="absolute -bottom-2 -right-1" />
+      </RouterLink>
 
       <div class="w-max absolute left-0 right-0 mx-auto -bottom-10">
-        <div class="relative rounded-full overflow-hidden w-24 h-24">
-          <img class="h-full object-cover" :src="p.avatar" alt="avatar" />
+        <div class="relative w-24 h-24">
+
+          <RouterLink :to="{name:'UpdateProfil', params:{id:p.id}}">
+            <img class="h-full rounded-full object-cover" :src="p.avatar" alt="avatar" />
+          </RouterLink>
+
           <photo-vue class="absolute right-0 bottom-0" />
         </div>
       </div>
@@ -35,16 +41,7 @@
 
     <noteVue>{{ p.Note }}</noteVue>
 
-    <textarea
-      name="regleMatch"
-      id="regleMatch"
-      cols="35"
-      rows="1"
-      required
-      placeholder="Ajouter description ✏️"
-      autocomplete="off"
-      class="border-b border-b-gray-500 mx-5 my-5 py-2"
-    ></textarea>
+    <p>{{p.description}}</p>
 
     <div class="grid grid-cols-3 justify-center">
       <BoxVue :nbr="p.Nbr_match_organise" texte="Match organisés " />
@@ -168,18 +165,18 @@
 
 
 <script>
-import BoussoleGrayIcon from "../components/icons/boussoleGray.vue";
-import EnregistreWhiteIcon from "../components/icons/enregistrementWhite.vue";
-import FriendsGrayIcon from "../components/icons/friendsGray.vue";
-import AvatarGreenIcon from "../components/icons/avatarGreen.vue";
+import BoussoleGrayIcon from "../../components/icons/boussoleGray.vue";
+import EnregistreWhiteIcon from "../../components/icons/enregistrementWhite.vue";
+import FriendsGrayIcon from "../../components/icons/friendsGray.vue";
+import AvatarGreenIcon from "../../components/icons/avatarGreen.vue";
 
-import photoVue from "../components/icons/photo.vue";
-import noteVue from "../components/icons/note.vue";
-import starsVue from "../components/icons/stars.vue";
-import BoxVue from "../components/icons/box.vue";
-import medaillesVue from "../components/icons/medailles.vue";
-import FriendsVue from "../components/icons/friends.vue";
-import Friends from "../components/icons/friends2.vue";
+import photoVue from "../../components/icons/photo.vue";
+import noteVue from "../../components/icons/note.vue";
+import starsVue from "../../components/icons/stars.vue";
+import BoxVue from "../../components/icons/box.vue";
+import medaillesVue from "../../components/icons/medailles.vue";
+import FriendsVue from "../../components/icons/friends.vue";
+import Friends from "../../components/icons/friends2.vue";
 
 import {
   getFirestore,
