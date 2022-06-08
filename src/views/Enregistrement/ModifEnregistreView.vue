@@ -1,59 +1,50 @@
 <template>
-  <div class="ml-5 mt-9">
-    <p class="text-xl font-arial font-bold">Enregistrés récemment</p>
+    <div class="max-w-6xl m-auto">
 
-    <slider />
+        <RouterLink to="/enregistre">
+            <flecheRetour class="m-5"/>
+        </RouterLink>
 
-    <p class="text-base mt-7 font-arial font-bold">
-      Favories
-    </p>
+        <h1 class="m-5 text-xl font-arial font-bold">Terrain de Frambouhans</h1>
 
-    <div class="py-2 flex flex-row overflow-x-scroll">
-
-        <PetitCarteTerrain v-for="t in listeTerrains" :key="t.id"
-          class="flex-none"
-          :nom="t.nom"
-          :note="t.note"
-          :distance="t.distance"
-          :image="t.photo"/>
-
-  </div>
-
-    <hr class="border-gray-600 w-11/12 mt-5" />
-
-    <div class="grid grid-cols-2">
-      <p class="text-base font-arial font-bold">Vos listes</p>
-      <div class="justify-center">
-        <plusgreen class="inline align-top pt-1" />
-
-        <RouterLink to="/creerEnregistre">
-          <button class="text-base inline text-green-550 font-arial">
-            Ajouter une liste
+        <RouterLink to="/createEnregistre">>
+          <button class="block
+          w-max
+          h-max
+          p-5
+          mx-10
+          bg-green-450
+          text-white
+          font-arial font-bold
+          text-base
+          uppercase
+          rounded-xl
+          shadow-md
+          hover:bg-green-550 hover:shadow-lg
+          focus:bg-green-550 focus:shadow-lg focus:outline-none focus:ring-0
+          active:bg-green-550 active:shadow-lg
+          transition
+          duration-150
+          ease-in-out">   
+            Ajouter un terrain
           </button>
         </RouterLink>
-      </div>
 
-      <RouterLink to="/modifEnregistre">
-        <button class="text-left">
-          <p class="font-arial mt-2">Favories</p>
-          <p class="text-xs font-bold text-gray-500 inline">
-            7 enregistrement ✏️
-          </p>
-        </button>
-      </RouterLink>
-    </div>
+        <hr class="border-gray-500 w-11/12 mt-5 mx-auto" />
 
-    <div class="grid grid-cols-2">
-      <div>
-        <p class="font-arial mt-2">Skatepark</p>
-        <p class="text-xs font-bold text-gray-500 inline">
-          2 enregistrement✏️
-        </p>
-      </div>
-    </div>
-    <div class="h-32"></div>
+        <div class="mx-auto w-max my-10 flex flex-col lg:flex-row lg:flex-wrap lg:w-full gap-10">
+            <EnregistreCarteTerrain v-for="t in listeTerrains" :key="t.id"
+                class="flex-none"
+                :nom="t.nom"
+                :adresse="t.adresse"
+                :note="t.note"
+                :distance="t.distance"
+                :image="t.photo"/>
+        </div>
 
-  <!--Menu-->
+    <!--MENU-->
+    <div class="h-28"></div>
+
     <div
       class="
         fixed
@@ -115,9 +106,8 @@
         </RouterLink>
       </nav>
     </div>
-  </div>
+    </div>
 </template>
-
 
 <script>
 import BoussoleGrayIcon from "../../components/icons/boussoleGray.vue";
@@ -125,9 +115,8 @@ import EnregistreGreenIcon from "../../components/icons/enregistrementGreen.vue"
 import FriendsGrayIcon from "../../components/icons/friendsGray.vue";
 import AvatarGrayIcon from "../../components/icons/avatarGray.vue";
 
-import slider from "../../components/SliderView.vue";
-import PetitCarteTerrain from "../../components/PetitCarteTerrain.vue";
-import plusgreen from "../../components/icons/plusgreen.vue";
+import flecheRetour from "../../components/icons/flecheRetour.vue";
+import EnregistreCarteTerrain from "../../components/EnregistreCarteTerrain.vue";
 
 import {
   getFirestore,
@@ -151,15 +140,15 @@ import {
 
 
 export default {
-  name: "EnregistreView",
+  name: "ModifEnregistreView",
   components: {
-    slider,
     BoussoleGrayIcon,
     EnregistreGreenIcon,
     FriendsGrayIcon,
     AvatarGrayIcon,
-    PetitCarteTerrain,
-    plusgreen,
+
+    flecheRetour,
+    EnregistreCarteTerrain,
   },
 
   data() {
@@ -198,7 +187,6 @@ export default {
         console.log("listeTerrains", this.listeTerrains);
       });
     },
-  },  
-  
+  }, 
 };
 </script>

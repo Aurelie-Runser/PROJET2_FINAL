@@ -13,8 +13,9 @@ import ContactView from '../views/ContactView.vue'
 import CreerMatchView from '../views/Match/CreerMatchView.vue'
 
 //Pages depuis les Enregistrements
+import CreerEnregistre from '../views/Enregistrement/CreerEnregistreView.vue'
+import ModifEnregistre from '../views/Enregistrement/ModifEnregistreView.vue'
 import CreateEnregistre from '../views/Enregistrement/CreateView.vue'
-import UpdateEnregistre from '../views/Enregistrement/UpdateView.vue'
 
 //Pages depuis Amis
 import ProfilAmiView from '../views/ProfilAmiView.vue'
@@ -38,12 +39,13 @@ const router = createRouter({
 
     { path: '/creerMatch', name: 'CreerMatchView', component: CreerMatchView },
 
+    { path: '/creerEnregistre', name: 'CreerEnregistre', component: CreerEnregistre },
+    { path: '/modifEnregistre', name: 'ModifEnregistre', component: ModifEnregistre },
     { path: '/createEnregistre', name: 'CreateEnregistre', component: CreateEnregistre },
-    { path: '/updateEnregistre', name: 'UpdateEnregistre', component: UpdateEnregistre },
 
     { path: '/profilAmi', name: 'ProfilAmiView', component: ProfilAmiView },
 
-    { path: '/updateProfil', name: 'UpdateProfil', component: UpdateProfil },
+    { path: '/updateProfil/:id', name: 'UpdateProfil', component: UpdateProfil },
 
     { path: '/contact', name: 'ContactView', component: ContactView },
 

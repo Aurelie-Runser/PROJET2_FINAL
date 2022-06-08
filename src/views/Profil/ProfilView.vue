@@ -64,7 +64,7 @@
       <BoxVue nbr="5" texte="Médailles" />
     </div>
 
-    <h2 class="mt-10 ml-3 text-3xl font-medium">Médailles ✏️</h2>
+    <h2 class="mt-10 ml-3 text-3xl font-medium">Médailles</h2>
 
     <div class="grid grid-cols-3">
       <medaillesVue
@@ -75,7 +75,7 @@
       <medaillesVue image="/public/images/trophee1.png" txt="Précurseur   " />
     </div>
 
-    <h2 class="mt-9 mb-6 ml-3 text-3xl font-medium">Amis ✏️</h2>
+    <h2 class="mt-9 mb-6 ml-3 text-3xl font-medium">Amis</h2>
     <div class="grid gap-3 grid-cols-1">
       <Friends image="/public/images/Paul2.png" txt="Paul Montavon" />
       <Friends image="/public/images/Judie.png" txt="Judie Winehouse " />
@@ -88,8 +88,8 @@
     </div>
 
     <RouterLink to="/connexion" class="block w-max mx-auto my-10">
-      <button
-        class="
+      <button @click="onDcnx()"
+          class="
           flex-none
           mx-auto
           w-max
@@ -219,6 +219,14 @@ import {
   uploadString,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+
+import {emitter} from "../../main.js";
+
 export default {
   name: "ProfilView",
   components: {
@@ -238,6 +246,10 @@ export default {
 
   data() {
     return {
+      user: {
+        email: "",
+        password: "",
+      },
       listeProfils: [],
     };
   },
@@ -282,6 +294,22 @@ export default {
         console.log("listeProfil", this.listeProfils);
       });
     },
+
+    onDcnx() {
+      signOut(getAuth())
+        .then((response) => {
+          console.log("deconect");
+          emitter.emit("deConnectUser", {user: this.user})
+          this.message = "Vous n'êtes pas connecté";
+          this.user = {
+            email: null,
+            password: null,
+          };
+        })
+        .catch((error) => {
+          console.log("Erreur déconnexion ", error);
+        });
+    }
   },
 };
 </script>

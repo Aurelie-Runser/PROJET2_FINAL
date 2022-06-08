@@ -301,6 +301,9 @@ import {
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
+import {emitter} from "../main.js";
+
+
 export default {
   name: "ConnexionView",
   components: {
@@ -332,27 +335,13 @@ export default {
       signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
         .then((response) => {
           this.user = response.user;
-
+          emitter.emit("connectUser", { user: this.user });
           console.log("user", this.user);
           this.message = "Bienvenue " + this.user.email;
         })
         .catch((error) => {
           console.log("Erreur de connexion", error);
           this.message = "Erreur d'autentification";
-        });
-    },
-
-    onDcnx() {
-      signOut(getAuth())
-        .then((response) => {
-          this.message = "Vous n'êtes pas connecté";
-          this.user = {
-            email: null,
-            password: null,
-          };
-        })
-        .catch((error) => {
-          console.log("Erreur déconnexion ", error);
         });
     },
   },
