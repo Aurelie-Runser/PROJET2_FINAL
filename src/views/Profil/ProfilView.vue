@@ -19,15 +19,18 @@
       >
         <img class="object-cover" alt="banniere" :src="p.banniere" />
       </div>
-      <RouterLink :to="{name:'UpdateProfil', params:{id:p.id}}">
+      <RouterLink :to="{ name: 'UpdateProfil', params: { id: p.id } }">
         <photo-vue class="absolute -bottom-2 -right-1" />
       </RouterLink>
 
       <div class="w-max absolute left-0 right-0 mx-auto -bottom-10">
         <div class="relative w-24 h-24">
-
-          <RouterLink :to="{name:'UpdateProfil', params:{id:p.id}}">
-            <img class="h-full rounded-full object-cover" :src="p.avatar" alt="avatar" />
+          <RouterLink :to="{ name: 'UpdateProfil', params: { id: p.id } }">
+            <img
+              class="h-full rounded-full object-cover"
+              :src="p.avatar"
+              alt="avatar"
+            />
           </RouterLink>
 
           <photo-vue class="absolute right-0 bottom-0" />
@@ -41,7 +44,7 @@
 
     <noteVue>{{ p.Note }}</noteVue>
 
-    <p>{{p.description}}</p>
+    <p class="ml-2 pb-2">{{ p.description }}</p>
 
     <div class="grid grid-cols-3 justify-center">
       <BoxVue :nbr="p.Nbr_match_organise" texte="Match organisés " />
@@ -91,9 +94,15 @@
       </button>
     </RouterLink>
 
-    <RouterLink to="/mentionlegale">
-      <div>Mention legales</div>
-    </RouterLink>
+    <div class="mt-4 mb-2 flex justify-center">
+      <RouterLink to="/mentionlegale">
+        <div class="px-2 font-arial font-bold">Mention legales</div>
+      </RouterLink>
+      <p->-</p->
+      <RouterLink to="/contact">
+        <div class="px-2 font-arial font-bold">Contact</div>
+      </RouterLink>
+    </div>
 
     <div class="h-24"></div>
 

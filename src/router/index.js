@@ -7,6 +7,7 @@ import ProfilView from '../views/Profil/ProfilView.vue'
 
 import Page404View from '../views/Page404View.vue'
 import ConnexionView from '../views/ConnexionView.vue'
+import ContactView from '../views/ContactView.vue'
 
 //Pages depuis la map
 import CreerMatchView from '../views/Match/CreerMatchView.vue'
@@ -44,8 +45,12 @@ const router = createRouter({
 
     { path: '/updateProfil', name: 'UpdateProfil', component: UpdateProfil },
 
+    { path: '/contact', name: 'ContactView', component: ContactView },
+
     //page 404 
     { path: '/:catchAll(.*)', name: 'Page404View', component: Page404View },
+
+
 
 
   ]
