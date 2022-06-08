@@ -1,15 +1,17 @@
 <template>
 <div class="relative">
-  <div class="flex flex-row mt-2 ml-6 mb-3 content-center items-center w-max">
-      <img :src=image class="w-14"
-      alt="image Profile d'amis ">
+  <div class="flex flex-row ml-6 content-center items-center w-max">
+      <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-black">
+        <img :src=image class="object-cover"
+        alt="image Profile d'amis">
+      </div>
       
       <p class="text-black ml-2 font-normal text-xl text-center">
       {{txt}}
       </p>
   </div>
 
-  <div class="absolute bottom-3 left-16">
+  <div class="absolute bottom-0 left-16">
   <svg
     width="13"
     height="13"

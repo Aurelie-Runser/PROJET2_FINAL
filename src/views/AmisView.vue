@@ -18,20 +18,17 @@
           w-full
           rounded-xl
           sm:text-sm
-          focus:ring-1
-        "
-        placeholder="   Votre recherche"
-      />
+          focus:ring-1"
+        placeholder="Votre recherche"
+        v-model="query">
     </label>
 
-    <h2 class="mt-7 ml-7">Connecté (3)</h2>
-    <div class="grid mt-10 grid-cols-1">
+    <h2 class="mt-7 ml-7">Connectés</h2>
+    <div  v-for="a in listeAmisSearch" :key="a.id"
+          class="grid mt-10 grid-cols-1">
       <RouterLink to="/profilAmi">
-        <Friends2 image="/public/images/Paul2.png" txt="Paul Montavon " />
+        <Friends2 :image="a.avatar" :txt="a.prenom+' '+a.Nom" />
       </RouterLink>
-
-      <Friends2 image="/public/images/Nathanael.png" txt="Nathanaël Desmeules"/>
-      <Friends2 image="/public/images/Marion.png" txt="Marion Comeira" />
     </div>
 
     <h2 class="mt-7 ml-7">Hors Ligne</h2>
@@ -130,23 +127,94 @@ import FriendsHL from "../components/icons/friendsHL.vue";
 import FriendsHL1 from "../components/icons/friendsHL.vue";
 import FriendsAttente from "../components/icons/friendsAttente.vue";
 
+import{
+  getFirestore,
+  collection,
+  doc,
+  getDoc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  orderBy
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js"
+
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+  uploadString,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js"
+
+
 export default {
   name: "HomeView",
   components: {
-    BoussoleGrayIcon,
-    EnregistreWhiteIcon,
-    FriendsGreenIcon,
-    AvatarGrayIcon,
-    Friends2Vue,
-    Friends2,
-    FriendsHLVue,
-    FriendsHL,
-    FriendsHL1,
-    FriendsAttente,
+    BoussoleGrayIcon, EnregistreWhiteIcon, FriendsGreenIcon, AvatarGrayIcon,
+
+    Friends2Vue, Friends2, FriendsHLVue, FriendsHL, FriendsHL1, FriendsAttente,
   },
 
-  data() {
-    return {};
+  data(){
+    return{
+      listeAmis:[],
+      query:"",
+    }
+  },
+
+  computed:{
+    orderByName:function(){
+      return this.listeAmis.sort(function(a,b){
+        if(a.prenom < b.prenom) return -1;
+        if(a.prenom > b.prenom) return 1;
+        return 0;
+      });
+    },
+    listeAmisSearch:function(){
+      if(this.query.length > 0){
+        let query = this.query.toLowerCase();
+        return this.orderByName.filter(function(a){
+          return a.prenom.toLowerCase().includes(query);
+        })
+      }
+      else{
+        return this.orderByName;
+      }
+    }
+  },
+
+  mounted(){
+    this.getAmis();
+  },
+
+  methods: {
+
+    async getAmis() {
+    const firestore = getFirestore();
+    const dbAmis = collection(firestore, "Amis");
+    const query = await onSnapshot(dbAmis, (snapshot) => {
+        console.log("query", query);
+      this.listeAmis = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      this.listeAmis.forEach(function (ami) {
+        const storage = getStorage();
+        const spaceRef = ref(storage, "avatar/" + ami.avatar);
+        getDownloadURL(spaceRef)
+          .then((url) => {
+            ami.avatar = url;
+            console.log("Ami", ami);
+          })
+          .catch((error) => {
+            console.log("erreur downloadUrl", error);
+          });
+        });
+        console.log("listeAmis", this.listeAmis);
+      });
+    },
   },
 };
 </script>
