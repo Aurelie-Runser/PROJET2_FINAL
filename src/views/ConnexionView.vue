@@ -6,13 +6,22 @@
       alt="logo de notre projet"
     />
 
-    <form class="w-11/12 mx-auto mt-10"
-          @submit.prevent="onCnx">
+    <form class="w-11/12 mx-auto mt-10" @submit.prevent="onCnx">
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3 mb-6 md:mb-0">
           <label
-            class=" block uppercase tracking-wide text-Beige-150 mt-2 text-xs font-bold mb-2"
-            for="grid-first-name">
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-Beige-150
+              mt-2
+              text-xs
+              font-bold
+              mb-2
+            "
+            for="grid-first-name"
+          >
             Adresse Email
           </label>
           <input
@@ -20,7 +29,22 @@
             id="grid-first-name"
             type="email"
             required
-            class="appearance-none block w-full bg-gray-200 text-noir mt-2 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"/>
+            class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-noir
+              mt-2
+              border border-gray-500
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+              focus:outline-none focus:bg-white
+            "
+          />
 
           <p class="text-red-500 text-xs italic">
             Veuillez renseigner ce champs.
@@ -31,8 +55,18 @@
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3 mb-6 md:mb-0">
           <label
-            class="block uppercase tracking-wide text-Beige-150 -mt-4 text-xs font-bold mb-2"
-            for="grid-first-name">
+            class="
+              block
+              uppercase
+              tracking-wide
+              text-Beige-150
+              -mt-4
+              text-xs
+              font-bold
+              mb-2
+            "
+            for="grid-first-name"
+          >
             Mot de passe
           </label>
           <input
@@ -40,7 +74,22 @@
             required
             id="grid-first-name"
             :type="type"
-            class="appearance-none block w-full bg-gray-200 text-noir mt-2 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"/>
+            class="
+              appearance-none
+              block
+              w-full
+              bg-gray-200
+              text-noir
+              mt-2
+              border border-gray-500
+              rounded
+              py-3
+              px-4
+              mb-3
+              leading-tight
+              focus:outline-none focus:bg-white
+            "
+          />
 
           <p class="text-red-500 text-xs italic">
             Veuillez renseigner ce champs.
@@ -49,37 +98,103 @@
       </div>
 
       <div class="-mt-6">
-          <div class="form-check">
-            <input
-              class="flex justify-start ml-10 lg:ml-16 form-check-input appearance-none h-4 w-4 border border-gray-600 rounded-sm bg-white checked:bg-green-550 checked:border-green-550 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"/>
+        <div class="form-check">
+          <input
+            class="
+              flex
+              justify-start
+              ml-10
+              lg:ml-16
+              form-check-input
+              appearance-none
+              h-4
+              w-4
+              border border-gray-600
+              rounded-sm
+              bg-white
+              checked:bg-green-550 checked:border-green-550
+              focus:outline-none
+              transition
+              duration-200
+              mt-1
+              align-top
+              bg-no-repeat bg-center bg-contain
+              float-left
+              mr-2
+              cursor-pointer
+            "
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
 
-            <div class="lg:mt-10">
-              <label
-                class="form-check-label inline-block text-gray-800"
-                for="flexCheckDefault">
-                Se souvenir de moi
-              </label>
-            </div>
+          <div class="lg:mt-10">
+            <label
+              class="form-check-label inline-block text-gray-800"
+              for="flexCheckDefault"
+            >
+              Se souvenir de moi
+            </label>
           </div>
+        </div>
       </div>
 
-      <p>{{message}}</p>
+      <p>{{ message }}</p>
 
-          <button
-            type="submit"
-            class="block w-max h-max p-5 mx-auto my-10 bg-green-450 text-white font-arial font-bold text-xl uppercase rounded-xl shadow-md hover:bg-green-550 hover:shadow-lg focus:bg-green-550 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-550 active:shadow-lg transition duration-150 ease-in-out">
-            Se connecter
-          </button>
+      <button
+        type="submit"
+        class="
+          block
+          w-max
+          h-max
+          p-5
+          mx-auto
+          my-10
+          bg-green-450
+          text-white
+          font-arial font-bold
+          text-xl
+          uppercase
+          rounded-xl
+          shadow-md
+          hover:bg-green-550 hover:shadow-lg
+          focus:bg-green-550 focus:shadow-lg focus:outline-none focus:ring-0
+          active:bg-green-550 active:shadow-lg
+          transition
+          duration-150
+          ease-in-out
+        "
+      >
+        Se connecter
+      </button>
 
-        <RouterLink to="/profil">
-          <button
-            class="block w-max h-max p-5 mx-auto my-10 bg-green-450 text-white font-arial font-bold text-xl uppercase rounded-xl shadow-md hover:bg-green-550 hover:shadow-lg focus:bg-green-550 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-550 active:shadow-lg transition duration-150 ease-in-out">
-            Aller sur mon profil
-          </button>
-        </RouterLink>
+      <RouterLink to="/profil">
+        <button
+          class="
+            block
+            w-max
+            h-max
+            p-5
+            mx-auto
+            my-10
+            bg-green-450
+            text-white
+            font-arial font-bold
+            text-xl
+            uppercase
+            rounded-xl
+            shadow-md
+            hover:bg-green-550 hover:shadow-lg
+            focus:bg-green-550 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-green-550 active:shadow-lg
+            transition
+            duration-150
+            ease-in-out
+          "
+        >
+          Aller sur mon profil
+        </button>
+      </RouterLink>
 
       <div class="mt-4 flex justify-center">
         <RouterLink class="mx-2" to="/mentionlegale"> S'inscrire </RouterLink>
@@ -155,7 +270,6 @@
         </RouterLink>
       </nav>
     </div>
-
   </div>
 </template>
 
@@ -166,22 +280,24 @@ import EnregistreWhiteIcon from "../components/icons/enregistrementWhite.vue";
 import FriendsGrayIcon from "../components/icons/friendsGray.vue";
 import AvatarGreenIcon from "../components/icons/avatarGreen.vue";
 
-
 import {
   getAuth,
   signInWithEmailAndPassword,
-  signOut
-} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js"
-
-import {emitter} from "../main.js";
+  signOut,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
 export default {
   name: "ConnexionView",
-  components: {BoussoleGrayIcon, EnregistreWhiteIcon, FriendsGrayIcon, AvatarGreenIcon},
+  components: {
+    BoussoleGrayIcon,
+    EnregistreWhiteIcon,
+    FriendsGrayIcon,
+    AvatarGreenIcon,
+  },
 
-  data(){
-    return{
-      user:{
+  data() {
+    return {
+      user: {
         email: "",
         password: "",
       },
@@ -189,42 +305,41 @@ export default {
       view: false,
       type: "text",
       imgData: null,
-    }
+    };
   },
 
-  mounted(){
-    this.message = "Vous n'êtes pas connecté"
+  mounted() {
+    this.message = "Vous n'êtes pas connecté";
   },
 
-  methods:{
-    onCnx(){
+  methods: {
+    onCnx() {
       signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
-      .then((response) =>{
-        this.user = response.user;
-        emitter.emit("connectUser", {user: this.user});
-        console.log("user", this.user);
-        this.message = "Bienvenue "+this.user.email;
-      })
-      .catch((error)=>{
-        console.log("Erreur de connexion", error);
-        this.message = "Erreur d'autentification";
-      })
+        .then((response) => {
+          this.user = response.user;
+
+          console.log("user", this.user);
+          this.message = "Bienvenue " + this.user.email;
+        })
+        .catch((error) => {
+          console.log("Erreur de connexion", error);
+          this.message = "Erreur d'autentification";
+        });
     },
 
-    onDcnx(){
+    onDcnx() {
       signOut(getAuth())
-      .then(response =>{
-        this.message = "Vous n'êtes pas connecté";
-        this.user = {
-          email: null,
-          password: null,
-        };
-        emitter.emit("deConnectUser", {user: this.user});
-      })
-      .catch(error =>{
-        console.log("Erreur déconnexion ", error);
-      })
+        .then((response) => {
+          this.message = "Vous n'êtes pas connecté";
+          this.user = {
+            email: null,
+            password: null,
+          };
+        })
+        .catch((error) => {
+          console.log("Erreur déconnexion ", error);
+        });
     },
-  }
+  },
 };
 </script>
