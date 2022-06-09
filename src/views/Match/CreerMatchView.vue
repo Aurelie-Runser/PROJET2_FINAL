@@ -24,7 +24,7 @@
           <option>Football</option>
           <option>Basketball</option>
           <option>Tennis</option>
-          <option>Skate</option>
+          <option>Rugby</option>
           <option>Skate</option>
           <option>Parcours Sportif</option>
         </select>
