@@ -53,7 +53,7 @@
       </div>
 
       <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3 mb-6 md:mb-0">
+        <div class="relative w-full px-3 mb-6 md:mb-0">
           <label
             class="
               block
@@ -94,6 +94,9 @@
           <p class="text-red-500 text-xs italic">
             Veuillez renseigner ce champs.
           </p>
+
+          <eyeIcon class="absolute top-4 right-5"
+                    @click.prevent="affiche()"/>
         </div>
       </div>
 
@@ -297,6 +300,8 @@ import EnregistreWhiteIcon from "../components/icons/enregistrementWhite.vue";
 import FriendsGrayIcon from "../components/icons/friendsGray.vue";
 import AvatarGreenIcon from "../components/icons/avatarGreen.vue";
 
+import eyeIcon from "../components/icons/eye.vue";
+
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -313,6 +318,8 @@ export default {
     EnregistreWhiteIcon,
     FriendsGrayIcon,
     AvatarGreenIcon,
+
+    eyeIcon,
   },
 
   data() {
@@ -323,7 +330,7 @@ export default {
       },
       message: null,
       view: false,
-      type: "text",
+      type:"password",
       imgData: null,
     };
   },
@@ -345,6 +352,12 @@ export default {
           console.log("Erreur de connexion", error);
           this.message = "Erreur d'autentification";
         });
+    },
+
+    affiche(){
+      this.view = !this.view;
+      if(this.view)   {this.type = "text";}
+      else            {this.type = "password";}
     },
   },
 };
