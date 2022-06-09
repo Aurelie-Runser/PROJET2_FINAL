@@ -78,7 +78,7 @@
             
             <RouterLink to="/map" class="flex w-1/4 h-full flex-col items-center justify-center">
             <BoussoleGrayIcon class="w-auto h-6 mb-2" />
-            Découvrire
+            Découvrir
             </RouterLink>
 
             <RouterLink to="/enregistre" class="flex w-1/4 h-full flex-col items-center justify-center">

@@ -344,7 +344,7 @@
           "
         >
           <BoussoleGreenIcon class="w-auto h-6 mb-2" />
-          Découvrire
+          Découvrir
         </RouterLink>
 
         <RouterLink
