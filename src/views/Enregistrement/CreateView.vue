@@ -186,7 +186,6 @@ export default {
       const firestore = getFirestore();
       const dbTerrains = collection(firestore, "Terrains");
       const query = await onSnapshot(dbTerrains, (snapshot) => {
-        console.log("query", query);
         this.listeTerrains = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -198,7 +197,6 @@ export default {
           getDownloadURL(spaceRef)
             .then((url) => {
               terrain.photo = url;
-              console.log("Terrain", terrain);
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
@@ -210,17 +208,13 @@ export default {
 
     previewImage: function(event) {
             this.file = this.$refs.file.files[0];
-            // Récupérer le nom du fichier pour la photo du participant
             this.Terrains.photo = this.file.name;
-            // Reference du fichier à prévisualiser
             var input = event.target;
-            // On s'assure que l'on a au moins un fichier à lire
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = (e) => {
                     this.imgData = e.target.result;
                 }
-                // Demarrage du reader pour la transformer en data URL (format base 64) 
                 reader.readAsDataURL(input.files[0]);        
             }
         },
@@ -231,11 +225,9 @@ export default {
             await uploadString(refStorage, this.imgData, 'data_url').then((snapshot) => {
                 console.log('Uploaded a base64 string');
                 
-                // Création du participant sur le Firestore
                 const db = getFirestore();
                 const docRef = addDoc(collection(db, 'Terrains'), this.Terrains );
             });
-            // redirection sur la liste des participants
             this.$router.push("/modifEnregistre");           
         }
   },  

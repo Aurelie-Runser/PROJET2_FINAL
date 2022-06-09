@@ -263,7 +263,6 @@ export default {
       const firestore = getFirestore();
       const dbProfils = collection(firestore, "Profils");
       const query = await onSnapshot(dbProfils, (snapshot) => {
-        console.log("query", query);
         this.listeProfils = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -275,7 +274,6 @@ export default {
           getDownloadURL(spaceRef)
             .then((url) => {
               profil.avatar = url;
-              console.log("profil", profil);
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
@@ -285,20 +283,18 @@ export default {
           getDownloadURL(spaceRef2)
             .then((url) => {
               profil.banniere = url;
-              console.log("profil", profil);
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
             });
         });
-        console.log("listeProfil", this.listeProfils);
       });
     },
 
     onDcnx() {
       signOut(getAuth())
         .then((response) => {
-          console.log("deconect");
+          console.log("deconecter");
           emitter.emit("deConnectUser", {user: this.user})
           this.message = "Vous n'êtes pas connecté";
           this.user = {

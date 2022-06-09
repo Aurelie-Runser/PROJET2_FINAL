@@ -243,6 +243,3 @@ Nous tâcherons de vous répondre dans les plus brefs délais."
     </form>
   </div>
 </template>
-
-<script>
-</script>

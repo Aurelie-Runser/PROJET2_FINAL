@@ -195,7 +195,6 @@ export default {
     const firestore = getFirestore();
     const dbAmis = collection(firestore, "Amis");
     const query = await onSnapshot(dbAmis, (snapshot) => {
-        console.log("query", query);
       this.listeAmis = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
@@ -207,7 +206,6 @@ export default {
         getDownloadURL(spaceRef)
           .then((url) => {
             ami.avatar = url;
-            console.log("Ami", ami);
           })
           .catch((error) => {
             console.log("erreur downloadUrl", error);

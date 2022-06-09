@@ -284,7 +284,7 @@
       heure="14:30"
       actuel="7 participants"
       organisateur="Anthony Hawk"
-      notevue="3.8"
+      notevue="3.6"
       image="public\skatepark_pane.jpg"
       sport="public/images/skate.png"
       regle="apres midi détente"
@@ -379,7 +379,6 @@
 </style>
 
 <script>
-import GrandeCarteTerrainRun from "../components/GrandeCarteTerrainRun.vue";
 import boutonorga from "../components/boutonorga.vue";
 import loupe from "../components/icons/loupe.vue";
 import rednotif from "../components/icons/iconsPing/rednotif.vue";
@@ -407,7 +406,6 @@ import GrandeCarteTerrain from "../components/GrandeCarteTerrain.vue";
 export default {
   name: "HomeView",
   components: {
-    GrandeCarteTerrainRun,
     boutonorga,
     MatchOrgaView2,
     MatchOrgaView,
