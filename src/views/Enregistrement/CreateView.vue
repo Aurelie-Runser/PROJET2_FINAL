@@ -202,7 +202,6 @@ export default {
               console.log("erreur downloadUrl", error);
             });
         });
-        console.log("listeTerrains", this.listeTerrains);
       });
     },
 

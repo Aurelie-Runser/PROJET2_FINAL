@@ -165,7 +165,7 @@ export default {
   },
 
   mounted(){
-    console.log("id Amis", this.$route.params.id);
+    /*console.log("id Amis", this.$route.params.id);*/
     this.getAmi(this.$route.params.id);
   },
 

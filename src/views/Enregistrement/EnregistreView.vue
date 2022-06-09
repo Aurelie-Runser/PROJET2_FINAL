@@ -167,7 +167,6 @@ export default {
       const firestore = getFirestore();
       const dbTerrains = collection(firestore, "Terrains");
       const query = await onSnapshot(dbTerrains, (snapshot) => {
-        console.log("query", query);
         this.listeTerrains = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -179,13 +178,11 @@ export default {
           getDownloadURL(spaceRef)
             .then((url) => {
               terrain.photo = url;
-              console.log("Terrain", terrain);
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
             });
         });
-        console.log("listeTerrains", this.listeTerrains);
       });
     },
   },  

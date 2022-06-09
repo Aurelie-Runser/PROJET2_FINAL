@@ -211,7 +211,6 @@ export default {
             console.log("erreur downloadUrl", error);
           });
         });
-        console.log("listeAmis", this.listeAmis);
       });
     },
   },
