@@ -141,14 +141,12 @@
 
       <div
         class="
-          mt-5
-          flex
+          my-5
+          p-3
           border-2
           rounded-xl
           text-lg
-          font-medium
-          justify-center
-          p-1
+          font-arial
           border-green-550
           text-center text-green-550
         "

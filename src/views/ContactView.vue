@@ -1,14 +1,13 @@
 <template>
-  <div class="ml-2">
+  <div class="p-5">
     <p
       class="
         xl:text-8xl
         lg:text-6xl
-        md:text-4xlxl
+        md:text-4xl
         sm:text-3xl
-        xl:pb-4
         font-arial
-        mt-2
+        my-5
         text-lg
         font-bold
         text-left text-green-550
@@ -17,14 +16,14 @@
       NOUS CONTACTER
     </p>
 
-    <p class="text-center font-arial">
+    <p class="text-center font-arial my-5">
       Si vous avez des questions à propos de notre site web, vous pouvez nous
       contacter par ce formulaire. Nos équipes tâcheront de vous répondre dans
       les plus bref délais.
     </p>
 
     <img
-      class="w-32 mx-auto"
+      class="w-32 mx-auto my-5"
       src="public\logocamatch.png"
       alt="logo ca match"
     />
