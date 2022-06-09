@@ -12,7 +12,7 @@
 
             <div class="my-14 flex flex-wrap items-center justify-center gap-10">
 
-                <p class="bg-red-300 p-5">Attention, cet action est irréversible !</p>
+                <p class="bg-red-300 p-5 flex-none w-full text-center text-xl">Attention, cet action est irréversible !</p>
 
                 <button type="submit" 
                     class="block w-max h-max p-5 bg-red-550 text-white font-arial font-bold text-xl rounded-xl shadow-md">   

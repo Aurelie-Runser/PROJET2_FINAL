@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed">
+  <div class="fixed left-0 right-0 max-w-5xl mx-auto">
     <div class="p-5 mt-0 h-screen bg-white rounded-xl overflow-hidden">
       <p class="mt-5 text-lg font-arial">Match organisé</p>
       <div class="h-8"></div>

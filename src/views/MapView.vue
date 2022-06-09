@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-scroll">
+  <div class="max-w-5xl mx-auto overflow-x-scroll">
     <div class="w-max h-screen relative">
       <img
         class="w-auto h-full overflow-hidden z-0"
@@ -186,7 +186,7 @@
       nom="Terrain Chabaud"
       note="3.1"
       distance="1.8 km"
-      image="public\terrainfoot2.jpg"
+      image="/terrainfoot2.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisiblefoot1 }"
     />
@@ -195,7 +195,7 @@
       nom="Stade de la Banane"
       note="4"
       distance="450 m"
-      image="public\stade_banane.jpg"
+      image="/stade_banane.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisiblefoot2 }"
     />
@@ -204,7 +204,7 @@
       nom="parcours bois courcelles"
       note="4.3"
       distance="2.2 km"
-      image="public\parcours_courcelles.jpg"
+      image="/parcours_courcelles.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisiblerun }"
     />
@@ -213,7 +213,7 @@
       nom="Terrain de Basket Châteaudun"
       note="3.8"
       distance="210 m"
-      image="public\basket1.jpg"
+      image="/basket1.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisible }"
     />
@@ -236,7 +236,7 @@
       nom="Terrain de tennis Hanckock"
       note="3.5"
       distance="4.3 km"
-      image="public\terraintennis.jpg"
+      image="/terraintennis.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisiblenotif }"
     />
@@ -260,7 +260,7 @@
       nom="Skatepark Pascal Pané"
       note="4.6"
       distance="200 m"
-      image="public\skatepark_pane.jpg"
+      image="/skatepark_pane.jpg"
       class="z-10 duration-500 transition-transform"
       :class="{ '-translate-y-72': CarteVisiblenotifskate }"
     />
@@ -270,9 +270,9 @@
       heure="16:00"
       actuel="1 participant"
       organisateur="Tedy Vincent"
-      image="public\terraintennis.jpg"
+      image="/terraintennis.jpg"
       notevue="4.2"
-      sport="public/images/tennis.png"
+      sport="/images/tennis.png"
       regle="Match de tennis en 2 sets 6 jeux "
       nom="Terrain de tennis Hanckock"
       class="z-0 duration-500 transition-transform"
@@ -285,8 +285,8 @@
       actuel="7 participants"
       organisateur="Anthony Hawk"
       notevue="3.6"
-      image="public\skatepark_pane.jpg"
-      sport="public/images/skate.png"
+      image="/skatepark_pane.jpg"
+      sport="/images/skate.png"
       regle="apres midi détente"
       nom="Skatepark Pascal Pane"
       class="z-0 duration-500 transition-transform"
@@ -393,7 +393,6 @@ import carteTerrainPlus from "../components/carteTerrainPlus.vue";
 
 import GrandeCarteTerrainNotif from "../components/GrandeCarteTerrainNotif.vue";
 import MatchOrgaView from "../components/MatchOrgaView.vue";
-import MatchOrgaView2 from "../components/MatchOrgaView2.vue";
 
 import buttonPlusMap from "../components/icons/buttonPlusMap.vue";
 
@@ -407,7 +406,6 @@ export default {
   name: "HomeView",
   components: {
     boutonorga,
-    MatchOrgaView2,
     MatchOrgaView,
     loupe,
     rednotif,

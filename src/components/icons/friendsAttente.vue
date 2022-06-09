@@ -1,8 +1,10 @@
 <template>
 <div class="relative">
   <div class="flex flex-row -mt-2 ml-6 mb-3 content-center items-center w-max">
-      <img :src=image class="w-14"
-      alt="image Profile d'amis ">
+      <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-black">
+        <img :src=image class="w-14"
+        alt="image Profile d'amis ">
+      </div>
       
       <p class="text-black ml-2 font-normal text-xl text-center">
       {{txt}}

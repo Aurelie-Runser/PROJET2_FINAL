@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl m-auto">
+  <div class="max-w-5xl mx-auto">
     <div class="w-auto h-12 bg-gray-500">
       <p class="text-center text-[22.000993728637695px] font-bold italic text-black">
         PUB
@@ -36,7 +36,7 @@
                     @change="previewAvatar">
         </div>
     
-        <div class="m-5">
+        <div class="m-5 flex flex-col">
             <h2 class="mx-5 my-5 text-lg font-arial font-bold">Prénom, Nom et Description</h2>
 
             <input class="border-2 border-green-550 my-3 px-3 py-2"

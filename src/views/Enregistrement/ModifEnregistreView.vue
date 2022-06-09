@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-6xl m-auto">
+    <div class="max-w-5xl m-auto">
 
         <RouterLink to="/enregistre">
             <flecheRetour class="m-5"/>
@@ -32,7 +32,7 @@
 
         <hr class="border-gray-500 w-11/12 mt-5 mx-auto" />
 
-        <div class="mx-auto w-max my-10 flex flex-col lg:flex-row lg:flex-wrap lg:w-full gap-5">
+        <div class="mx-auto w-max my-10 flex flex-col justify-center lg:flex-row lg:flex-wrap lg:w-full gap-5">
             <div v-for="t in listeTerrains" :key="t.id"
             class="flex flex-col items-end">
               <EnregistreCarteTerrain

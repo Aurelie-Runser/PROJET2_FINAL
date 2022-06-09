@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5">
+  <div class="max-w-5xl mx-auto p-5">
     <p
       class="
         xl:text-8xl
@@ -24,7 +24,7 @@
 
     <img
       class="w-32 mx-auto my-5"
-      src="../../public/logocamatch.png"
+      src="/logocamatch.png"
       alt="logo ca match"
     />
 

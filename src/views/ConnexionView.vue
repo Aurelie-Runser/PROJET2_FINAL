@@ -1,8 +1,8 @@
 <template>
-  <div class="max-w-7xl mx-auto">
+  <div class="max-w-5xl mx-auto">
     <img
       class="mx-auto w-[35vw]"
-      src="../../public/images/logo.png"
+      src="/images/logo.png"
       alt="logo de notre projet"
     />
 
@@ -144,8 +144,10 @@
 
       <div
         class="
+          mx-auto
           my-5
           p-3
+          w-max
           border-2
           rounded-xl
           text-lg

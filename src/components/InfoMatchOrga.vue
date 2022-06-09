@@ -24,7 +24,7 @@
         <p class="text-xl mt-2 my-1">{{ nom }}</p>
         <p class="text-sm z-50 my-1 text-gray-500">{{ regle }}</p>
         <img :src="sport" alt="logo de ballon de foot" class="w-4 my-1 h-4" />
-        <!-- Ajoutez ici la base donné-->
+
       </div>
     </div>
   </div>

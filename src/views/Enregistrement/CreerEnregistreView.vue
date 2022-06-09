@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-6xl m-auto">
+    <div class="max-w-5xl m-auto">
 
         <h1 class="m-5 text-xl font-arial font-bold">Nouvelle liste</h1>
 

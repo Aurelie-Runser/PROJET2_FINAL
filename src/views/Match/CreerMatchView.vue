@@ -61,25 +61,25 @@
           </div>
           <div class="flex overflow-x-scroll py-2">
             <carteTerrainPlus
-              nom="Skatepark  Harley Davidson"
-              note="4.7"
-              distance="4.3km"
-              image="public\basket1.jpg"
+              nom="Terrain de Tennis Silhouette"
+              note="5"
+              distance="1.2 km"
+              image="/silhouette.jpg"
               class="flex-none basis-auto"
             />
 
             <carteTerrainPlus
-              nom="Skatepark  Harley Davidson"
-              note="4.7"
-              distance="4.3km"
-              image="public\basket1.jpg"
+              nom="Terrain de Basket Châteaudun"
+              note="3.8"
+              distance="210 m"
+              image="/terrain_chateaudun.jpg"
               class="flex-none basis-auto"
             />
             <carteTerrainPlus
-              nom="Skatepark  Harley Davidson"
-              note="4.7"
-              distance="4.3km"
-              image="public\basket1.jpg"
+              nom="Stade Mougnot"
+              note="4.0"
+              distance="10.1 km"
+              image="/basket1.jpg"
               class="flex-none basis-auto"
             />
           </div>

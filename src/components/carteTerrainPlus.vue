@@ -1,4 +1,3 @@
-<!--Carte de terrain utiliser pour créer un terrain-->
 <template>
   <div
     class="
@@ -19,7 +18,7 @@
         class="w-full h-28 object-cover rounded-2xl"/>
 
       <figcaption class="my-3 text-sm">{{ nom }}</figcaption>
-      <!-- Ajoutez ici la base donné-->
+
     </figure>
 
     <div class="flex justify-between items-center text-lg">
@@ -27,13 +26,12 @@
       <div class="flex items-center">
         <fleche class="mx-1 w-5" />
         <p class="">{{ distance }}</p>
-        <!--base de donnée-->
       </div>
 
       <div class="flex items-center">
         <stars class="mx-1 w-5" />
         <p>{{ note }}</p>
-        <!--base de donnée-->
+
       </div>
 
       <div>

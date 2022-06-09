@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="max-w-5xl mx-auto">
     <label class="block mt-10 pl-2 pr-2">
       <input
         type="search"
@@ -34,16 +34,13 @@
 
     <h2 class="mt-7 ml-7">Hors Ligne</h2>
     <div class="grid mt-10 grid-cols-1">
-      <FriendsHL image="/public/images/Paul2.png" txt="Judie Winehouse " />
-      <FriendsHL1
-        image="/public/images/Nathanael.png"
-        txt="Christopher Mccandless "
-      />
+      <FriendsHL image="/images/Paul2.png" txt="Judie Winehouse " />
+      <FriendsHL1 image="/images/Nathanael.png" txt="Christopher Mccandless"/>
     </div>
 
     <h2 class="mt-7 ml-7">En attente</h2>
     <div class="grid mt-10 grid-cols-1">
-      <FriendsAttente image="/public/images/Thomas.png" txt="Thomas Alonzo" />
+      <FriendsAttente image="/images/Thomas.jpg" txt="Thomas Alonzo" />
     </div>
 
     <div class="h-24"></div>

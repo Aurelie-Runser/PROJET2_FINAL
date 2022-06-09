@@ -1,5 +1,5 @@
 <template>
-    <div class="p-5">
+    <div class="p-5 max-w-5xl mx-auto">
         <h1 class="font-arial text-2xl mb-5">Modification du terrain</h1>
         <form @submit.prevent="updateTerrain">
             <input type="text"

@@ -31,7 +31,7 @@
     <div class="flex justify-center">
       <img
         class="w-screen lg:w-8/12 max-h-96 absolute bottom-0"
-        src="../../public/images/404Illustration.png"
+        src="/images/404Illustration.png"
         alt="illustration page 404"
       />
     </div>

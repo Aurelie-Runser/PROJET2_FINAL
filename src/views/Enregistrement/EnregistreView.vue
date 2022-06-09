@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-5 mt-9">
+  <div class="mt-9 max-w-5xl mx-auto">
     <p class="text-xl font-arial font-bold">Enregistrés récemment</p>
 
     <slider />
@@ -42,6 +42,8 @@
         </button>
       </RouterLink>
     </div>
+
+    <div class="h-28"></div>
 
   <!--Menu-->
     <div

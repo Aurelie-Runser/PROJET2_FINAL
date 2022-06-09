@@ -20,18 +20,18 @@
         class="w-96 h-20 object-cover rounded-2xl"
       />
       <figcaption class="text-sm my-1">{{ nom }}</figcaption>
-      <!-- Ajoutez ici la base donné-->
+
     </figure>
     <div class="flex justify-around items-center text-lg">
       <div class="flex items-center">
         <fleche class="w-5" />
         <p class="">{{ distance }}</p>
-        <!--base de donnée-->
+
       </div>
       <div class="flex items-center">
         <stars class="w-5" />
         <p>{{ note }}</p>
-        <!--base de donnée-->
+
       </div>
 
     </div>

@@ -5,7 +5,7 @@
       nom="Terrain de Tennis Silhouette"
       note="5"
       distance="1.2 km"
-      image="public\silhouette.jpg"
+      image="/silhouette.jpg"
     />
 
     <PetitCarteTerrain
@@ -13,7 +13,7 @@
       nom="Terrain de Basket Châteaudun"
       note="3.8"
       distance="210 m"
-      image="public\terrain_chateaudun.jpg"
+      image="/terrain_chateaudun.jpg"
     />
 
     <PetitCarteTerrain
@@ -21,7 +21,7 @@
       nom="Stade Mougnot"
       note="4.0"
       distance="10.1 km"
-      image="public/images/terrain3.jpg"
+      image="/basket1.jpg"
     />
   </div>
 </template>

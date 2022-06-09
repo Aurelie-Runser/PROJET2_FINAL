@@ -28,19 +28,19 @@
         <div>
           <p class="text-base mb-1 mr-12">{{ nom }}</p>
           <p class="text-sm text-gray-500">{{ adresse }}</p>
-          <!-- Ajoutez ici la base donné-->
+
         </div>
 
         <div class="flex justify-around items-center text-lg">
           <div class="flex items-center gap-1 p-2 bg-gray-200 rounded-xl">
             <stars class="h-5" />
             <p class="text-sm text-gray-600">{{ note }}</p>
-            <!--base de donnée-->
+
           </div>
           <div class="flex items-center gap-1 p-2 bg-gray-200 rounded-xl">
             <fleche class="h-5" />
             <p class="text-sm text-gray-600">{{ distance }}</p>
-            <!--base de donnée-->
+
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-green-450">
-    <img class="w-24 mr-auto ml-auto" src="../../public/logocamatch.png" alt="" />
+    <img class="w-24 mr-auto ml-auto" src="/logocamatch.png" alt="" />
     <div class="mr-auto ml-auto md:text-lg lg:text-xl xl:text-2xl">
       <p class="w-4/5 mr-auto ml-auto text-left">
         <span class="text-3xl text-left text-white"
