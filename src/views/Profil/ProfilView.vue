@@ -78,13 +78,10 @@
     <h2 class="mt-9 mb-6 ml-3 text-3xl font-medium">Amis</h2>
     <div class="grid gap-3 grid-cols-1">
       <Friends image="/public/images/Paul2.png" txt="Paul Montavon" />
-      <Friends image="/public/images/Judie.png" txt="Judie Winehouse " />
+      <Friends image="/public/images/TheoDumont.jpg" txt="Theo Dumont" />
       <Friends image="/public/images/Nathanael.png" txt="Nathanaël Desmeules" />
-      <Friends
-        image="/public/images/Christopher.png"
-        txt="Christopher Mccandless "
-      />
-      <Friends image="/public/images/Marion.png" txt="Marion Comeira" />
+      <Friends image="/public/images/Claire.webp" txt="Claire Chateau"/>
+      <Friends image="/public/images/Marion.jpg" txt="Marion Comeira" />
     </div>
 
     <RouterLink to="/" class="block w-max mx-auto my-10">

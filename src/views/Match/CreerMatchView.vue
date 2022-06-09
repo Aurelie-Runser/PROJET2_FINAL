@@ -135,23 +135,25 @@
         </div>
 
         <div class="flex flex-row flex-wrap gap-x-20 gap-y-5 justify-center">
-          <button
-            type="submit"
-            class="
-              flex-none
-              w-52
-              p-4
-              bg-green-450
-              rounded-xl
-              shadow-md shadow-gray-300
-              font-arial font-bold
-              text-white text-4xl text-center
-            "
-          >
-            Créer
-          </button>
+          <RouterLink to="/map">
+            <button
+              type="submit"
+              class="
+                flex-none
+                w-52
+                p-4
+                bg-green-450
+                rounded-xl
+                shadow-md shadow-gray-300
+                font-arial font-bold
+                text-white text-4xl text-center
+              "
+            >
+              Créer
+            </button>
+          </RouterLink>
 
-          <RouterLink to="/">
+          <RouterLink to="/map">
             <button
               class="
                 flex-none

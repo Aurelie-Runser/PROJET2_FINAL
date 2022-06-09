@@ -37,7 +37,7 @@
         <button class="text-left">
           <p class="font-arial mt-2">Favories</p>
           <p class="text-xs font-bold text-gray-500 inline">
-            7 enregistrement ✏️
+            Modifer ✏️
           </p>
         </button>
       </RouterLink>

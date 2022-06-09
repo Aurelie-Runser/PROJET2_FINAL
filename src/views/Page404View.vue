@@ -12,7 +12,7 @@
     </div>
 
     <div class="flex justify-center">
-      <RouterLink to="/map">
+      <RouterLink to="/profil">
         <button
           class="
             bg-white
@@ -24,7 +24,7 @@
             rounded-xl
           "
         >
-          Retour à la Map
+          Retour à mon Profil
         </button>
       </RouterLink>
     </div>
