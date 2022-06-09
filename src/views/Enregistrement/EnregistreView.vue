@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-9 max-w-5xl mx-auto">
+  <div class="p-5 max-w-5xl mx-auto">
     <p class="text-xl font-arial font-bold">Enregistrés récemment</p>
 
     <slider />

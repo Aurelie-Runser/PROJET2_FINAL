@@ -222,7 +222,7 @@
 Nous tâcherons de vous répondre dans les plus brefs délais."
         ></textarea>
 
-        <RouterLink to="/">
+        <RouterLink to="profil">
           <button
             class="
               bg-green-550
