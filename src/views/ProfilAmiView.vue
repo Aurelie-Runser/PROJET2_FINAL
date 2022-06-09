@@ -7,7 +7,9 @@
         </div>
 
         <div class="relative mt-9 w-11/12 mx-auto ml-auto">
-            <img class="w-full aspect-video md:aspect-[9/3] rounded-2xl" :src="Banniere" alt="banniere">
+            <div class="aspect-video md:aspect-[9/3] rounded-2xl overflow-hidden">
+                <img class="w-full h-auto" :src="Banniere" alt="banniere">
+            </div>
 
             <div class="w-max absolute left-0 right-0 mx-auto -bottom-10">
                 <div class="relative w-24 h-24 rounded-full overflow-hidden">
