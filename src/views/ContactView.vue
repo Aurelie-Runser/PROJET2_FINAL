@@ -24,7 +24,7 @@
 
     <img
       class="w-32 mx-auto my-5"
-      src="public\logocamatch.png"
+      src="../../public/logocamatch.png"
       alt="logo ca match"
     />
 
