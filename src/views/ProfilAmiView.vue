@@ -22,7 +22,7 @@
             {{Ami.Note}}
         </noteVue>
 
-        <p class="m-5">Description</p>
+        <p class="m-5">{{Ami.description}}</p>
         <div class="grid grid-cols-3 justify-center">  
         <BoxVue
             :nbr="Ami.Nbr_match_organise"
@@ -153,6 +153,7 @@ export default {
           avata: null,
           banniere: null,
           Note: null,
+          description: null,
           Nbr_match_joue: null,
           Nbr_match_organise: null,
           medailles: null,
