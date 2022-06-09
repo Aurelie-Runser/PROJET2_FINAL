@@ -217,6 +217,10 @@
         <RouterLink class="mx-2" to="/mentionlegale">
           <p class="pb-12">Mot de passe oublié</p>
         </RouterLink>
+        <p>|</p>
+        <RouterLink class="mx-2" to="/contact">
+          <p class="pb-12">Contact</p>
+        </RouterLink>
       </div>
     </form>
 
@@ -244,7 +248,7 @@
     >
       <nav class="flex w-full h-full align-center">
         <RouterLink
-          to="/"
+          to="/map"
           class="flex w-1/4 h-full flex-col items-center justify-center"
         >
           <BoussoleGrayIcon class="w-auto h-6 mb-2" />

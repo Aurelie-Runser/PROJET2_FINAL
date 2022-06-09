@@ -87,7 +87,7 @@
       <Friends image="/public/images/Marion.png" txt="Marion Comeira" />
     </div>
 
-    <RouterLink to="/connexion" class="block w-max mx-auto my-10">
+    <RouterLink to="/" class="block w-max mx-auto my-10">
       <button @click="onDcnx()"
           class="
           flex-none
@@ -140,7 +140,7 @@
     >
       <nav class="flex w-full h-full align-center">
         <RouterLink
-          to="/"
+          to="/map"
           class="flex w-1/4 h-full flex-col items-center justify-center"
         >
           <BoussoleGrayIcon class="w-auto h-6 mb-2" />

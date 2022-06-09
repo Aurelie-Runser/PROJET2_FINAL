@@ -331,7 +331,7 @@
     >
       <nav class="flex w-full h-full align-center">
         <RouterLink
-          to="/"
+          to="/map"
           class="
             flex
             w-1/4
