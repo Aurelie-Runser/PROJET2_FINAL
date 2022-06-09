@@ -5,7 +5,7 @@
             <flecheRetour class="m-5"/>
         </RouterLink>
 
-        <h1 class="m-5 text-xl font-arial font-bold">Favories</h1>
+        <h1 class="m-5 text-xl font-arial font-bold">Favoris</h1>
 
         <RouterLink to="/createEnregistre" class="block w-max">
           <button class="block

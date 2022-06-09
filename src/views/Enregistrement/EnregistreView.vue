@@ -5,7 +5,7 @@
     <slider />
 
     <p class="text-base mt-7 font-arial font-bold">
-      Favories
+      Favoris
     </p>
 
     <div class="py-2 flex flex-row overflow-x-scroll">
@@ -35,7 +35,7 @@
 
       <RouterLink to="/modifEnregistre">
         <button class="text-left">
-          <p class="font-arial mt-2">Favories</p>
+          <p class="font-arial mt-2">Favoris</p>
           <p class="text-xs font-bold text-gray-500 inline">
             Modifer ✏️
           </p>

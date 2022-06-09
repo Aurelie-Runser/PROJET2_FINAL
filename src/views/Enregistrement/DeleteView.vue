@@ -1,6 +1,6 @@
 <template>
     <div class="p-5">
-        <h1 class="font-arial text-2xl mb-5">Ajout d'un terrain dans Favories</h1>
+        <h1 class="font-arial text-2xl mb-5">Supprimer le terrains de Favoris</h1>
         <form @submit.prevent="deleteTerrain">
 
             <EnregistreCarteTerrain
