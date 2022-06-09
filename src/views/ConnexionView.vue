@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto">
     <img
       class="mx-auto w-[35vw]"
-      src="public\images\logo.png"
+      src="../../public/images/logo.png"
       alt="logo de notre projet"
     />
 
