@@ -22,8 +22,11 @@
         <select class="bg-white">
           <option></option>
           <option>Football</option>
-          <!--v-for="pays in listeSport" :key='sport'-->
           <option>Basketball</option>
+          <option>Tennis</option>
+          <option>Skate</option>
+          <option>Skate</option>
+          <option>Parcours Sportif</option>
         </select>
       </div>
 
@@ -112,7 +115,7 @@
               required
               class="flex-none w-[30px] h-[30px]"
             />
-            <!--modif ça-->
+
             <p class="mx-4 font-normal text-lg">
               Je m’engage à participer à ce match, et accepte d’éventuel
               sanctions dans le cas contraire.
@@ -126,7 +129,7 @@
               required
               class="flex-none w-[30px] h-[30px]"
             />
-            <!--modif ça-->
+
             <p class="mx-4 font-normal text-lg">
               Accepter de rendre mon profile visible par tous le monde, tant que
               l’évenement sera affiché.

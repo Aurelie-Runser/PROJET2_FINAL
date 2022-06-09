@@ -36,12 +36,6 @@
       />
     </div>
   </div>
-
-  <!-- nom: { type: String },
-    adresse: { type: String },
-    image: { type: String },
-    distance: { type: String },
-    note: { type: String }, -->
 </template>
 
  
