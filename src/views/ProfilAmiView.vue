@@ -38,9 +38,9 @@
         <h2 class=" mt-10 ml-3 text-3xl font-medium">Médailles</h2>
 
         <div class="grid grid-cols-3 ">
-            <medaillesVue image="/public/images/medailles1.png" txt="Homme du match"/>
-            <medaillesVue image="/public/images/blocnote.png" txt="Organisateur né"/>
-            <medaillesVue image="/public/images/trophee1.png" txt="Précurseur"/>
+            <medaillesVue image="/images/medailles1.png" txt="Homme du match"/>
+            <medaillesVue image="/images/blocnote.png" txt="Organisateur né"/>
+            <medaillesVue image="/images/trophee1.png" txt="Précurseur"/>
         </div>
 
         <div class="cursor-pointer mx-auto my-10 w-max p-4 bg-green-450 rounded-xl shadow-md shadow-gray-500 font-arial font-bold text-white text-2xl text-center">Envoyer un message</div>

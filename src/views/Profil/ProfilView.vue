@@ -67,21 +67,18 @@
     <h2 class="mt-10 ml-3 text-3xl font-medium">Médailles</h2>
 
     <div class="grid grid-cols-3">
-      <medaillesVue
-        image="/public/images/medailles1.png"
-        txt="Homme du match  "
-      />
-      <medaillesVue image="public/images/blocnote.png" txt="Organisateur né " />
-      <medaillesVue image="/public/images/trophee1.png" txt="Précurseur   " />
+      <medaillesVue image="/images/medailles1.png" txt="Homme du match"/>
+      <medaillesVue image="/images/blocnote.png" txt="Organisateur né" />
+      <medaillesVue image="/images/trophee1.png" txt="Précurseur" />
     </div>
 
     <h2 class="mt-9 mb-6 ml-3 text-3xl font-medium">Amis</h2>
     <div class="grid gap-3 grid-cols-1">
-      <Friends image="/public/images/Paul2.png" txt="Paul Montavon" />
-      <Friends image="/public/images/TheoDumont.jpg" txt="Theo Dumont" />
-      <Friends image="/public/images/Nathanael.png" txt="Nathanaël Desmeules" />
-      <Friends image="/public/images/Claire.webp" txt="Claire Chateau"/>
-      <Friends image="/public/images/Marion.jpg" txt="Marion Comeira" />
+      <Friends image="/images/Paul2.png" txt="Paul Montavon" />
+      <Friends image="/images/TheoDumont.jpg" txt="Theo Dumont" />
+      <Friends image="/images/Nathanael.png" txt="Nathanaël Desmeules" />
+      <Friends image="/images/Claire.webp" txt="Claire Chateau"/>
+      <Friends image="/images/Marion.jpg" txt="Marion Comeira" />
     </div>
 
     <RouterLink to="/" class="block w-max mx-auto my-10">
