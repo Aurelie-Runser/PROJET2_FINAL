@@ -20,22 +20,22 @@
             <h2 class="m-5 text-xl font-arial font-bold">Ajouter un terrain</h2>
 
             <div class="flex overflow-x-scroll py-2">
-                <carteTerrainPlus nom="Skatepark  Harley Davidson"
+                <carteTerrainPlus nom="Terrain de tennis Basille"
                             note="4.7"
                             distance="4.3km"
-                            image="public\basket1.jpg"
+                            image="/tennis1.jpg"
                             class="flex-none basis-auto"/>
         
-                <carteTerrainPlus nom="Skatepark  Harley Davidson"
-                            note="4.7"
+                <carteTerrainPlus nom="Skatepark Harley Davidson"
+                            note="2.4"
                             distance="4.3km"
-                            image="public\basket1.jpg"
+                            image="/skatepark1.jpg"
                             class="flex-none basis-auto"/>
 
-                <carteTerrainPlus nom="Skatepark  Harley Davidson"
-                            note="4.7"
+                <carteTerrainPlus nom="Terrain de Foot Belfort"
+                            note="3.1"
                             distance="4.3km"
-                            image="public\basket1.jpg"
+                            image="/foot1.jpeg"
                             class="flex-none basis-auto"/>
             </div>
 
